@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/initial-template-react-ts/static/css/main.ebb62d79.css",
-    "main.js": "/initial-template-react-ts/static/js/main.2ea007a9.js",
-    "index.html": "/initial-template-react-ts/index.html",
-    "main.ebb62d79.css.map": "/initial-template-react-ts/static/css/main.ebb62d79.css.map",
-    "main.2ea007a9.js.map": "/initial-template-react-ts/static/js/main.2ea007a9.js.map"
+    "main.css": "/DamarAgrotrade/static/css/main.41820338.css",
+    "main.js": "/DamarAgrotrade/static/js/main.a5ec801e.js",
+    "index.html": "/DamarAgrotrade/index.html",
+    "main.41820338.css.map": "/DamarAgrotrade/static/css/main.41820338.css.map",
+    "main.a5ec801e.js.map": "/DamarAgrotrade/static/js/main.a5ec801e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebb62d79.css",
-    "static/js/main.2ea007a9.js"
+    "static/css/main.41820338.css",
+    "static/js/main.a5ec801e.js"
   ]
 }
