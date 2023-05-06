@@ -1,38 +1,56 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
 import Box from '../Box/box';
+import {
+  HeaderBox,
+  MenuBtn,
+  Nav,
+  NavMenu,
+  NavMenuLink,
+  NavUser,
+} from './header.style';
+
+import { ReactComponent as Cancel } from '../../img/cancel.svg';
+import { ReactComponent as Menu } from '../../img/menu.svg';
 
 function Header() {
+  const [menu, setMenu] = useState(false);
+
   return (
     <header>
-      <Box paddingTop={0} paddingBottom={0}>
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="/">Про нас</NavLink>
-            </li>
-            <li>
-              <NavLink to="/">Каталог продукції</NavLink>
-            </li>
-            <li>
-              <NavLink to="/">Оплата і доставка</NavLink>
-            </li>
-            <li>
-              <NavLink to="/">Партнери</NavLink>
-            </li>
-            <li>
-              <NavLink to="/">Новини</NavLink>
-            </li>
-            <li>
-              <NavLink to="/">Контакти</NavLink>
-            </li>
-          </ul>
-
-          <NavLink to="/">Вхід</NavLink>
-          <NavLink to="/">Реестрація</NavLink>
-          <button type="button">|||</button>
-        </nav>
-      </Box>
+      <HeaderBox>
+        <Box>
+          <Nav>
+            <NavMenu>
+              <li>
+                <NavMenuLink to="/">Про нас</NavMenuLink>
+              </li>
+              <li>
+                <NavMenuLink to="/">Каталог продукції</NavMenuLink>
+              </li>
+              <li>
+                <NavMenuLink to="/">Оплата і доставка</NavMenuLink>
+              </li>
+              <li>
+                <NavMenuLink to="/">Партнери</NavMenuLink>
+              </li>
+              <li>
+                <NavMenuLink to="/">Новини</NavMenuLink>
+              </li>
+              <li>
+                <NavMenuLink to="/">Контакти</NavMenuLink>
+              </li>
+            </NavMenu>
+            <NavUser>
+              <NavMenuLink to="/">Вхід</NavMenuLink>
+              <span>|</span>
+              <NavMenuLink to="/">Реестрація</NavMenuLink>
+            </NavUser>
+            <MenuBtn type="button" onClick={() => setMenu(menu => !menu)}>
+              {menu ? <Cancel></Cancel> : <Menu></Menu>}
+            </MenuBtn>
+          </Nav>
+        </Box>
+      </HeaderBox>
     </header>
   );
 }
