@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
-  min-width: 320px;
   max-width: 1140px;
 
   padding-left: 15px;
