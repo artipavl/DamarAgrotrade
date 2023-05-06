@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 
-
 export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Montserrat';
@@ -64,4 +63,7 @@ export const GlobalStyle = createGlobalStyle`
     address {
   font-style: normal;
 }
-`
+svg {
+    fill: inherit;
+    }
+`;
