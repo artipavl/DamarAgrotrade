@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/DamarAgrotrade/static/css/main.41820338.css",
-    "main.js": "/DamarAgrotrade/static/js/main.a5ec801e.js",
+    "main.js": "/DamarAgrotrade/static/js/main.db51ddbd.js",
+    "static/media/cancel.svg": "/DamarAgrotrade/static/media/cancel.aee038dd9cc7f6feb489ccb7389fcc50.svg",
+    "static/media/menu.svg": "/DamarAgrotrade/static/media/menu.83ce2ad01074d31be716b0ea7ce92095.svg",
     "index.html": "/DamarAgrotrade/index.html",
     "main.41820338.css.map": "/DamarAgrotrade/static/css/main.41820338.css.map",
-    "main.a5ec801e.js.map": "/DamarAgrotrade/static/js/main.a5ec801e.js.map"
+    "main.db51ddbd.js.map": "/DamarAgrotrade/static/js/main.db51ddbd.js.map"
   },
   "entrypoints": [
     "static/css/main.41820338.css",
-    "static/js/main.a5ec801e.js"
+    "static/js/main.db51ddbd.js"
   ]
 }
