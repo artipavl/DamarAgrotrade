@@ -11,6 +11,12 @@ import {
 
 import { ReactComponent as Cancel } from '../../img/cancel.svg';
 import { ReactComponent as Menu } from '../../img/menu.svg';
+import { ReactComponent as Seeds } from '../../img/seeds.svg';
+import { ReactComponent as Farmer } from '../../img/farmer.svg';
+import { ReactComponent as Fertilizer } from '../../img/fertilizer.svg';
+import { ReactComponent as Frame } from '../../img/frame.svg';
+import { ReactComponent as Sapling } from '../../img/sapling.svg';
+import LinkButton from '../linkButton/linkButton';
 
 function Header() {
   const [menu, setMenu] = useState(false);
@@ -51,6 +57,11 @@ function Header() {
           </Nav>
         </Box>
       </HeaderBox>
+      <LinkButton to="/" img={Seeds} text="Насіння" />
+      <LinkButton to="/" img={Sapling} text="Засоби захисту рослин" />
+      <LinkButton to="/" img={Fertilizer} text="Добрива" />
+      <LinkButton to="/" img={Frame} text="кормова група" />
+      <LinkButton to="/" img={Farmer} text="Агроному в поміч" />
     </header>
   );
 }
