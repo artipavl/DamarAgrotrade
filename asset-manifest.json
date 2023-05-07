@@ -1,20 +1,23 @@
 {
   "files": {
     "main.css": "/DamarAgrotrade/static/css/main.41820338.css",
-    "main.js": "/DamarAgrotrade/static/js/main.348ecc2f.js",
-    "static/media/fertilizer.svg": "/DamarAgrotrade/static/media/fertilizer.ca6a85057e05268c88c44b55bac48042.svg",
-    "static/media/frame.svg": "/DamarAgrotrade/static/media/frame.f6a0155a26c402cdc1f4471198809a89.svg",
-    "static/media/seeds.svg": "/DamarAgrotrade/static/media/seeds.d2f212b3cbca1cc159efea146f94b889.svg",
-    "static/media/farmer.svg": "/DamarAgrotrade/static/media/farmer.8eb2818b78f836e4ea591bd885cd4f12.svg",
-    "static/media/sapling.svg": "/DamarAgrotrade/static/media/sapling.de63b62f71349d09231243931dd608a6.svg",
+    "main.js": "/DamarAgrotrade/static/js/main.c1e5e814.js",
+    "static/media/logo.svg": "/DamarAgrotrade/static/media/logo.e495c68976ffd8fa2fe50c26b76043ef.svg",
+    "static/media/fertilizer.svg": "/DamarAgrotrade/static/media/fertilizer.9875105f0af131afffb8e8ed2c2e813d.svg",
+    "static/media/frame.svg": "/DamarAgrotrade/static/media/frame.062beb927fb57b7a874f3982a6792174.svg",
+    "static/media/seeds.svg": "/DamarAgrotrade/static/media/seeds.2c7a76cef9547a7f5ce6d2cf01bfcbe0.svg",
+    "static/media/farmer.svg": "/DamarAgrotrade/static/media/farmer.419f04e996872e5322bd98b1f3a51dd3.svg",
+    "static/media/sapling.svg": "/DamarAgrotrade/static/media/sapling.e2d2a28d19e5ad14ee974315e9961749.svg",
     "static/media/cancel.svg": "/DamarAgrotrade/static/media/cancel.aee038dd9cc7f6feb489ccb7389fcc50.svg",
+    "static/media/shopping.svg": "/DamarAgrotrade/static/media/shopping.82666566d5d0216714fdd7fc256aa68a.svg",
+    "static/media/comparison.svg": "/DamarAgrotrade/static/media/comparison.87b99bc00d105d8eed446a0de18ebfbf.svg",
     "static/media/menu.svg": "/DamarAgrotrade/static/media/menu.83ce2ad01074d31be716b0ea7ce92095.svg",
     "index.html": "/DamarAgrotrade/index.html",
     "main.41820338.css.map": "/DamarAgrotrade/static/css/main.41820338.css.map",
-    "main.348ecc2f.js.map": "/DamarAgrotrade/static/js/main.348ecc2f.js.map"
+    "main.c1e5e814.js.map": "/DamarAgrotrade/static/js/main.c1e5e814.js.map"
   },
   "entrypoints": [
     "static/css/main.41820338.css",
-    "static/js/main.348ecc2f.js"
+    "static/js/main.c1e5e814.js"
   ]
 }
