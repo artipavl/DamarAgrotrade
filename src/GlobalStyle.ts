@@ -64,6 +64,6 @@ export const GlobalStyle = createGlobalStyle`
   font-style: normal;
 }
 svg {
-    fill: inherit;
+    fill: currentColor;
     }
 `;
