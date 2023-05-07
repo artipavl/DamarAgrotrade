@@ -17,7 +17,6 @@ export const NavMenu = styled.ul`
 
   @media (min-width: 1140px) {
     display: flex;
-    margin: auto;
     flex-direction: row;
     align-items: center;
     justify-content: start;
@@ -61,5 +60,52 @@ export const MenuBtn = styled.button`
   height: 50px;
   @media (min-width: 1140px) {
     display: none;
+  }
+`;
+
+export const LinkBox = styled.ul`
+  /* display: none; */
+
+  /* @media (min-width: 1140px) { */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  /* } */
+`;
+
+export const BasketAmount = styled.span`
+  margin-left: 7px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+`;
+
+export const HeaderInform = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+export const UserShopping = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  > * {
+    &:first-child {
+      display: none;
+      @media (min-width: 1140px) {
+        display: block;
+      }
+    }
+    &:last-child {
+      display: flex;
+      align-items: center;
+    }
   }
 `;
