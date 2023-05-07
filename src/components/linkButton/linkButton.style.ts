@@ -20,16 +20,20 @@ export const LinkBtn = styled(NavLink)`
 
   border: 1px solid #1e6140;
   border-radius: 20px;
+  > svg {
+    color: #84be51;
+  }
   :hover,
   :focus {
     color: #ffffff;
     background: #e74e13;
     border-color: #e74e13;
-    svg {
-      fill: '#fff';
+    > svg {
+      color: #ffffff;
     }
   }
   /* &.active {
     color: #000000;
   } */
 `;
+

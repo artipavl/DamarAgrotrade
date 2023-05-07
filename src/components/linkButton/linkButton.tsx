@@ -10,7 +10,7 @@ type LinkButtonProps = {
 const LinkButton: FC<LinkButtonProps> = ({ text, to, img: Img }) => {
   return (
     <LinkBtn to={to}>
-      <Img width="24px" />
+      <Img width="24" />
       <span>{text}</span>
     </LinkBtn>
   );
