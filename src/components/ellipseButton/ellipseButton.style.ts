@@ -21,6 +21,8 @@ export const LinkBtn = styled(Link)<StyleProps>`
   :focus {
     background-color: ${props => props.color};
     color: ${props => props.hoverColor};
+
+    box-shadow: 0px 5px 14px rgba(140, 50, 19, 0.3);
   }
 `;
 
@@ -39,6 +41,8 @@ export const Button = styled.button<StyleProps>`
   :focus {
     background-color: ${props => props.color};
     color: ${props => props.hoverColor};
+
+    box-shadow: 0px 5px 14px rgba(140, 50, 19, 0.3);
   }
 `;
 
