@@ -1,24 +1,26 @@
 {
   "files": {
     "main.css": "/DamarAgrotrade/static/css/main.41820338.css",
-    "main.js": "/DamarAgrotrade/static/js/main.7be539d0.js",
+    "main.js": "/DamarAgrotrade/static/js/main.3cf1df22.js",
     "static/media/logo.svg": "/DamarAgrotrade/static/media/logo.e495c68976ffd8fa2fe50c26b76043ef.svg",
     "static/media/fertilizer.svg": "/DamarAgrotrade/static/media/fertilizer.9875105f0af131afffb8e8ed2c2e813d.svg",
     "static/media/frame.svg": "/DamarAgrotrade/static/media/frame.062beb927fb57b7a874f3982a6792174.svg",
     "static/media/seeds.svg": "/DamarAgrotrade/static/media/seeds.2c7a76cef9547a7f5ce6d2cf01bfcbe0.svg",
     "static/media/farmer.svg": "/DamarAgrotrade/static/media/farmer.419f04e996872e5322bd98b1f3a51dd3.svg",
     "static/media/sapling.svg": "/DamarAgrotrade/static/media/sapling.e2d2a28d19e5ad14ee974315e9961749.svg",
+    "static/media/call.svg": "/DamarAgrotrade/static/media/call.a77726cc4fe45d7d36968d8e76cb68c6.svg",
     "static/media/cancel.svg": "/DamarAgrotrade/static/media/cancel.aee038dd9cc7f6feb489ccb7389fcc50.svg",
     "static/media/shopping.svg": "/DamarAgrotrade/static/media/shopping.82666566d5d0216714fdd7fc256aa68a.svg",
     "static/media/comparison.svg": "/DamarAgrotrade/static/media/comparison.87b99bc00d105d8eed446a0de18ebfbf.svg",
     "static/media/menu.svg": "/DamarAgrotrade/static/media/menu.83ce2ad01074d31be716b0ea7ce92095.svg",
     "static/media/loupe.svg": "/DamarAgrotrade/static/media/loupe.23f218d0db646ea3a887719f047196db.svg",
     "index.html": "/DamarAgrotrade/index.html",
+    "static/media/arrow.svg": "/DamarAgrotrade/static/media/arrow.c09b7b3b90eb8a7aba7efc2fca37f580.svg",
     "main.41820338.css.map": "/DamarAgrotrade/static/css/main.41820338.css.map",
-    "main.7be539d0.js.map": "/DamarAgrotrade/static/js/main.7be539d0.js.map"
+    "main.3cf1df22.js.map": "/DamarAgrotrade/static/js/main.3cf1df22.js.map"
   },
   "entrypoints": [
     "static/css/main.41820338.css",
-    "static/js/main.7be539d0.js"
+    "static/js/main.3cf1df22.js"
   ]
 }
