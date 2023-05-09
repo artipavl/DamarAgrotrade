@@ -11,6 +11,9 @@ import {
   BasketAmount,
   UserShopping,
   HeaderInform,
+  QueryInput,
+  QueryButton,
+  QueryForm,
 } from './header.style';
 
 import { FaRegHeart } from 'react-icons/fa';
@@ -25,12 +28,14 @@ import { ReactComponent as Sapling } from '../../img/sapling.svg';
 import { ReactComponent as Logo } from '../../img/logo.svg';
 import { ReactComponent as Shopping } from '../../img/shopping.svg';
 import { ReactComponent as Comparison } from '../../img/comparison.svg';
+import { ReactComponent as Loupe } from '../../img/loupe.svg';
 import LinkButton from '../linkButton/linkButton';
 import { Link } from 'react-router-dom';
 import EllipseButton from '../ellipseButton/ellipseButton';
 
 function Header() {
   const [menu, setMenu] = useState(false);
+  const [q, setQ] = useState('');
 
   return (
     <header>
@@ -73,6 +78,17 @@ function Header() {
           <Link to="/">
             <Logo />
           </Link>
+          <QueryForm>
+            <QueryInput
+              type="text"
+              value={q}
+              placeholder="Пошук"
+              onChange={e => setQ(e.target.value)}
+            />
+            <QueryButton to={`/?q=${q}`}>
+              <Loupe />
+            </QueryButton>
+          </QueryForm>
           <UserShopping>
             <li>
               <EllipseButton
