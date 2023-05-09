@@ -6,7 +6,7 @@ type EllipseButtonProps = {
   numder?: number;
   onClick?: Function;
   color: string;
-  hoverColor: string;
+  hovercolor: string;
   to?: string;
   svg: React.FC<React.SVGProps<SVGSVGElement>>;
 };

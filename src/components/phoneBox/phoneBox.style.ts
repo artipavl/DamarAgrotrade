@@ -1,0 +1,67 @@
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+type PhoneListProps = {
+  modal: boolean;
+};
+export const PhoneContainer = styled.div`
+  position: relative;
+  width: 280px;
+`;
+export const PhoneDiv = styled.div<PhoneListProps>`
+  position: ${props => (props.modal ? 'absolute' : 'static')};
+  top: -30.5px;
+  display: flex;
+  gap: 5px;
+  width: 280px;
+  padding: 10px;
+
+  background-color: ${props => props.modal && `#ffffff`};
+  box-shadow: ${props => props.modal && `0px 0px 8px rgba(0, 0, 0, 0.15)`};
+  border-radius: ${props => props.modal && `20px`};
+`;
+
+export const PhoneSelect = styled.div`
+  display: flex;
+  gap: 3px;
+`;
+
+export const LinkContakt = styled(Link)`
+  margin-top: 3px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+
+  text-decoration-line: underline;
+
+  color: #84be51;
+
+  :hover,
+  :focus {
+    color: rgb(231, 78, 19);
+  }
+`;
+
+export const SelectButton = styled.button<PhoneListProps>`
+  rotate: ${props => props.modal && `calc(180deg)`};
+`;
+
+export const PhoneList = styled.ul<PhoneListProps>`
+  visibility: ${props => (props.modal ? 'visible' : 'hidden')};
+  display: ${props => (props.modal ? 'flex' : 'none')};
+  flex-direction: column;
+  width: 100%;
+  gap: 13px;
+  margin-top: 17px;
+`;
+type PhoneItemProps = {
+  active: boolean;
+};
+export const PhoneItem = styled.li<PhoneItemProps>`
+  color: ${props => props.active && '#84be51'};
+  :hover,
+  :focus {
+    cursor: pointer;
+    color: #84be51;
+  }
+`;

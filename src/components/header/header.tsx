@@ -32,9 +32,10 @@ import { ReactComponent as Loupe } from '../../img/loupe.svg';
 import LinkButton from '../linkButton/linkButton';
 import { Link } from 'react-router-dom';
 import EllipseButton from '../ellipseButton/ellipseButton';
+import PhoneBox from '../phoneBox/phoneBox';
 
 function Header() {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
   const [q, setQ] = useState('');
 
   return (
@@ -89,12 +90,13 @@ function Header() {
               <Loupe />
             </QueryButton>
           </QueryForm>
+          <PhoneBox />
           <UserShopping>
             <li>
               <EllipseButton
                 to="/"
                 color="#8C3213"
-                hoverColor="#fff"
+                hovercolor="#fff"
                 svg={FaRegHeart}
               />
             </li>
@@ -102,7 +104,7 @@ function Header() {
               <EllipseButton
                 to="/"
                 color="#8C3213"
-                hoverColor="#fff"
+                hovercolor="#fff"
                 svg={Comparison}
                 numder={1}
               />
@@ -111,7 +113,7 @@ function Header() {
               <EllipseButton
                 onClick={() => {}}
                 color="#8C3213"
-                hoverColor="#fff"
+                hovercolor="#fff"
                 svg={Shopping}
                 numder={1}
               />

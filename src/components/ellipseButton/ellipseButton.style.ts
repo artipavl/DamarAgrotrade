@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 type StyleProps = {
   color: string;
-  hoverColor: string;
+  hovercolor: string;
 };
 
 export const LinkBtn = styled(Link)<StyleProps>`
@@ -20,7 +20,7 @@ export const LinkBtn = styled(Link)<StyleProps>`
   :hover,
   :focus {
     background-color: ${props => props.color};
-    color: ${props => props.hoverColor};
+    color: ${props => props.hovercolor};
 
     box-shadow: 0px 5px 14px rgba(140, 50, 19, 0.3);
   }
@@ -40,7 +40,7 @@ export const Button = styled.button<StyleProps>`
   :hover,
   :focus {
     background-color: ${props => props.color};
-    color: ${props => props.hoverColor};
+    color: ${props => props.hovercolor};
 
     box-shadow: 0px 5px 14px rgba(140, 50, 19, 0.3);
   }
