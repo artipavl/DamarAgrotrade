@@ -8,12 +8,8 @@ import {
   NavMenuLink,
   NavUser,
   LinkBox,
-  BasketAmount,
-  UserShopping,
   HeaderInform,
 } from './header.style';
-
-import { FaRegHeart } from 'react-icons/fa';
 
 import { ReactComponent as Cancel } from '../../img/cancel.svg';
 import { ReactComponent as Menu } from '../../img/menu.svg';
@@ -22,14 +18,12 @@ import { ReactComponent as Farmer } from '../../img/farmer.svg';
 import { ReactComponent as Fertilizer } from '../../img/fertilizer.svg';
 import { ReactComponent as Frame } from '../../img/frame.svg';
 import { ReactComponent as Sapling } from '../../img/sapling.svg';
-import { ReactComponent as Logo } from '../../img/logo.svg';
-import { ReactComponent as Shopping } from '../../img/shopping.svg';
-import { ReactComponent as Comparison } from '../../img/comparison.svg';
+
 import LinkButton from '../linkButton/linkButton';
-import { Link } from 'react-router-dom';
-import EllipseButton from '../ellipseButton/ellipseButton';
 import PhoneBox from '../phoneBox/phoneBox';
 import QueryForm from '../queryForm/queryForm';
+import UserShopping from '../userShopping/userShopping';
+import Logo from '../logo/logo';
 
 function Header() {
   const [menu, setMenu] = useState(true);
@@ -72,40 +66,10 @@ function Header() {
       </HeaderBox>
       <Box>
         <HeaderInform>
-          <Link to="/">
-            <Logo />
-          </Link>
+          <Logo />
           <QueryForm />
           <PhoneBox color="#8C3213" hovercolor="#fff" bgc="#ffffff" />
-          <UserShopping>
-            <li>
-              <EllipseButton
-                to="/"
-                color="#8C3213"
-                hovercolor="#fff"
-                svg={FaRegHeart}
-              />
-            </li>
-            <li>
-              <EllipseButton
-                to="/"
-                color="#8C3213"
-                hovercolor="#fff"
-                svg={Comparison}
-                numder={1}
-              />
-            </li>
-            <li>
-              <EllipseButton
-                onClick={() => {}}
-                color="#8C3213"
-                hovercolor="#fff"
-                svg={Shopping}
-                numder={1}
-              />
-              <BasketAmount>0.25 грн</BasketAmount>
-            </li>
-          </UserShopping>
+          <UserShopping color="#8C3213" hovercolor="#fff" />
         </HeaderInform>
       </Box>
       <Box>

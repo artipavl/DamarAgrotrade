@@ -70,12 +70,6 @@ export const LinkBox = styled.ul`
   /* } */
 `;
 
-export const BasketAmount = styled.span`
-  margin-left: 7px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-`;
 
 export const HeaderInform = styled.div`
   display: flex;
@@ -87,23 +81,5 @@ export const HeaderInform = styled.div`
   margin-bottom: 20px;
 `;
 
-export const UserShopping = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  > * {
-    &:first-child {
-      display: none;
-      @media (min-width: 1140px) {
-        display: block;
-      }
-    }
-    &:last-child {
-      display: flex;
-      align-items: center;
-    }
-  }
-`;
 
 
