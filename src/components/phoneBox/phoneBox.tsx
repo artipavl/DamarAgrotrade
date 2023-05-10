@@ -19,18 +19,23 @@ const phones = [
   '+38 (067) 784 45 89',
 ];
 
-type PhoneBoxProps = {};
+type PhoneBoxProps = {
+  color: string;
+  hovercolor: string;
+  bgc: string;
+  phoneColor?: string;
+};
 
-const PhoneBox: FC<PhoneBoxProps> = props => {
+const PhoneBox: FC<PhoneBoxProps> = ({ bgc, phoneColor, ...buttonStyle }) => {
   const [currentPhone, setCurrentPhone] = useState(phones[0]);
   const [modal, setModal] = useState(false);
 
   return (
     <PhoneContainer>
-      <PhoneDiv modal={modal}>
+      <PhoneDiv modal={modal} bgc={bgc} phoneColor={phoneColor}>
         <EllipseButton
+          {...buttonStyle}
           to={`tel:${currentPhone}`}
-          color="#8C3213"
           hovercolor="#fff"
           svg={Call}
         />

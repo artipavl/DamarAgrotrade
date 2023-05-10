@@ -76,7 +76,7 @@ function Header() {
             <Logo />
           </Link>
           <QueryForm />
-          <PhoneBox />
+          <PhoneBox color="#8C3213" hovercolor="#fff" bgc="#ffffff" />
           <UserShopping>
             <li>
               <EllipseButton

@@ -3,12 +3,19 @@ import styled from 'styled-components';
 
 type PhoneListProps = {
   modal: boolean;
+  
 };
+type PhoneDivProps = {
+  modal: boolean;
+  bgc: string;
+  phoneColor?: string;
+};
+
 export const PhoneContainer = styled.div`
   position: relative;
   width: 280px;
 `;
-export const PhoneDiv = styled.div<PhoneListProps>`
+export const PhoneDiv = styled.div<PhoneDivProps>`
   position: ${props => (props.modal ? 'absolute' : 'static')};
   top: -30.5px;
   display: flex;
@@ -16,7 +23,9 @@ export const PhoneDiv = styled.div<PhoneListProps>`
   width: 280px;
   padding: 10px;
 
-  background-color: ${props => props.modal && `#ffffff`};
+  color: ${props=>props.phoneColor};
+
+  background-color: ${props => props.modal && props.bgc};
   box-shadow: ${props => props.modal && `0px 0px 8px rgba(0, 0, 0, 0.15)`};
   border-radius: ${props => props.modal && `20px`};
 `;
