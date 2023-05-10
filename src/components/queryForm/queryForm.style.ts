@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+type FormProps = {
+  width?: string;
+};
 
-export const Form = styled.form`
+export const Form = styled.form<FormProps>`
   position: relative;
+  width: ${props => props.width || '342px'};
+  height: 40px;
 `;
 
 export const QueryInput = styled.input`
-  width: 342px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 90px;

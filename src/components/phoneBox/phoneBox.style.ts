@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 type PhoneListProps = {
   modal: boolean;
-  
 };
+
 type PhoneDivProps = {
   modal: boolean;
   bgc: string;

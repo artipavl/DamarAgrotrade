@@ -4,7 +4,9 @@ import { Form, QueryButton, QueryInput } from './queryForm.style';
 
 import { ReactComponent as Loupe } from '../../img/loupe.svg';
 
-type QueryFormProps = {};
+type QueryFormProps = {
+  width?: string;
+};
 
 const QueryForm: FC<QueryFormProps> = props => {
   const [q, setQ] = useState('');
@@ -12,6 +14,7 @@ const QueryForm: FC<QueryFormProps> = props => {
 
   return (
     <Form
+      {...props}
       onSubmit={e => {
         e.preventDefault();
         navigate(`/?q=${q}`);
