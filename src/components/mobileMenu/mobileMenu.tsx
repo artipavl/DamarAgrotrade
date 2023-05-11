@@ -6,7 +6,6 @@ import EllipseButton from '../ellipseButton/ellipseButton';
 import { FaRegHeart } from 'react-icons/fa';
 import QueryForm from '../queryForm/queryForm';
 import PhoneBox from '../phoneBox/phoneBox';
-import { NavLink } from 'react-router-dom';
 import {
   MobileBox,
   MobileComponent,
@@ -47,7 +46,7 @@ const MobileMenu: FC<MobileMenuProps> = props => {
                 <NavLinkText to="/k">Каталог продукції</NavLinkText>
               </li>
               <li>
-                <NavLinkText to="/o">Оплата і доставка</NavLinkText>
+                <NavLinkText to="/o">Оплата i доставка</NavLinkText>
               </li>
               <li>
                 <NavLinkText to="/p">Партнери</NavLinkText>
