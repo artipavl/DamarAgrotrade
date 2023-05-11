@@ -69,8 +69,13 @@ function Header() {
       <Box>
         <HeaderInform>
           <Logo />
-          <QueryForm />
-          <PhoneBox color="#8C3213" hovercolor="#fff" bgc="#ffffff" />
+          <QueryForm render={false} />
+          <PhoneBox
+            render={false}
+            color="#8C3213"
+            hovercolor="#fff"
+            bgc="#ffffff"
+          />
           <UserShopping color="#8C3213" hovercolor="#fff" />
         </HeaderInform>
       </Box>

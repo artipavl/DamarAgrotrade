@@ -6,6 +6,7 @@ import { ReactComponent as Loupe } from '../../img/loupe.svg';
 
 type QueryFormProps = {
   width?: string;
+  render?: boolean;
 };
 
 const QueryForm: FC<QueryFormProps> = props => {

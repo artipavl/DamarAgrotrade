@@ -24,14 +24,20 @@ type PhoneBoxProps = {
   hovercolor: string;
   bgc: string;
   phoneColor?: string;
+  render?: boolean;
 };
 
-const PhoneBox: FC<PhoneBoxProps> = ({ bgc, phoneColor, ...buttonStyle }) => {
+const PhoneBox: FC<PhoneBoxProps> = ({
+  render,
+  bgc,
+  phoneColor,
+  ...buttonStyle
+}) => {
   const [currentPhone, setCurrentPhone] = useState(phones[0]);
   const [modal, setModal] = useState(false);
 
   return (
-    <PhoneContainer>
+    <PhoneContainer render={render}>
       <PhoneDiv modal={modal} bgc={bgc} phoneColor={phoneColor}>
         <EllipseButton
           {...buttonStyle}

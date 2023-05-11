@@ -4,6 +4,9 @@ import styled from 'styled-components';
 type PhoneListProps = {
   modal: boolean;
 };
+type PhoneContainerProps = {
+  render?: boolean;
+};
 
 type PhoneDivProps = {
   modal: boolean;
@@ -11,10 +14,13 @@ type PhoneDivProps = {
   phoneColor?: string;
 };
 
-export const PhoneContainer = styled.div`
+export const PhoneContainer = styled.div<PhoneContainerProps>`
   position: relative;
   width: 280px;
   height: 41px;
+  @media (max-width: 1140px) {
+    display: ${props => props.render === false && 'none'};
+  }
 `;
 export const PhoneDiv = styled.div<PhoneDivProps>`
   position: ${props => (props.modal ? 'absolute' : 'static')};

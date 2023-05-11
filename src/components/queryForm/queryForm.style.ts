@@ -2,12 +2,16 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 type FormProps = {
   width?: string;
+  render?: boolean;
 };
 
 export const Form = styled.form<FormProps>`
   position: relative;
   width: ${props => props.width || '342px'};
   height: 40px;
+  @media (max-width: 1140px) {
+    display: ${props => props.render === false && 'none'};
+  }
 `;
 
 export const QueryInput = styled.input`
