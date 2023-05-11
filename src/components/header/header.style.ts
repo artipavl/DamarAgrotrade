@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderBox = styled.div`
+  position: relative;
   background-color: #1e6140;
 `;
 
@@ -70,7 +71,6 @@ export const LinkBox = styled.ul`
   /* } */
 `;
 
-
 export const HeaderInform = styled.div`
   display: flex;
   flex-direction: row;
@@ -80,6 +80,3 @@ export const HeaderInform = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
 `;
-
-
-

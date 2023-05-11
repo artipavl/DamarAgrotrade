@@ -7,7 +7,7 @@ type LogoProps = { color?: string };
 const Logo: FC<LogoProps> = ({ color }) => {
   return (
     <LogoLink to="/" color={color}>
-      <LogoInc />
+      <LogoInc width="106" />
     </LogoLink>
   );
 };

@@ -24,9 +24,10 @@ import PhoneBox from '../phoneBox/phoneBox';
 import QueryForm from '../queryForm/queryForm';
 import UserShopping from '../userShopping/userShopping';
 import Logo from '../logo/logo';
+import MobileMenu from '../mobileMenu/mobileMenu';
 
 function Header() {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   return (
     <header>
@@ -63,6 +64,7 @@ function Header() {
             </MenuBtn>
           </Nav>
         </Box>
+        {menu && <MobileMenu></MobileMenu>}
       </HeaderBox>
       <Box>
         <HeaderInform>

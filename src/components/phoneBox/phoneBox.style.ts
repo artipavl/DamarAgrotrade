@@ -14,16 +14,19 @@ type PhoneDivProps = {
 export const PhoneContainer = styled.div`
   position: relative;
   width: 280px;
+  height: 41px;
 `;
 export const PhoneDiv = styled.div<PhoneDivProps>`
   position: ${props => (props.modal ? 'absolute' : 'static')};
-  top: -30.5px;
+  /* top: -30.5px; */
+  top: -10px;
+  left: ${props => props.modal && '-10px'};
   display: flex;
   gap: 5px;
   width: 280px;
-  padding: 10px;
+  padding: ${props => props.modal && '10px'};
 
-  color: ${props=>props.phoneColor};
+  color: ${props => props.phoneColor};
 
   background-color: ${props => props.modal && props.bgc};
   box-shadow: ${props => props.modal && `0px 0px 8px rgba(0, 0, 0, 0.15)`};
