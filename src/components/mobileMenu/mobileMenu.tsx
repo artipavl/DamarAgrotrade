@@ -16,7 +16,7 @@ import {
 
 type MobileMenuProps = {};
 
-const MobileMenu: FC<MobileMenuProps> = props => {
+const MobileMenu: FC<MobileMenuProps> = () => {
   return (
     <MobileBox>
       <Box bgc="#1E6140">

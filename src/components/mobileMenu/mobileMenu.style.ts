@@ -8,9 +8,14 @@ export const MobileBox = styled.div`
   z-index: 1;
 
   width: 100%;
+  padding-top: 10px;
   min-height: calc(100vh - 50px);
 
   background-color: #1e6140;
+
+  @media (min-width: 1140px) {
+    display: none;
+  }
 `;
 
 export const MobileComponent = styled.div`
