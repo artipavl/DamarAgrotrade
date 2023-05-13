@@ -35,7 +35,12 @@ const MobileMenu: FC<MobileMenuProps> = props => {
             <QueryForm width="230px" />
           </MobileComponent>
           <MobileComponent>
-            <PhoneBox bgc="#1E6140" color="#ffffff" hovercolor="#8C3213" />
+            <PhoneBox
+              bgc="#1E6140"
+              color="#ffffff"
+              hovercolor="#8C3213"
+              textColor="#fff"
+            />
           </MobileComponent>
           <Nave>
             <NaveList>
