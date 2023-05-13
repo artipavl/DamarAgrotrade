@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DamarAgrotrade/static/css/main.41820338.css",
-    "main.js": "/DamarAgrotrade/static/js/main.0f1d097b.js",
+    "main.js": "/DamarAgrotrade/static/js/main.3cd08331.js",
     "static/media/logo.svg": "/DamarAgrotrade/static/media/logo.75e402254fcf99685e838d392100bdf5.svg",
     "static/media/fertilizer.svg": "/DamarAgrotrade/static/media/fertilizer.9875105f0af131afffb8e8ed2c2e813d.svg",
     "static/media/frame.svg": "/DamarAgrotrade/static/media/frame.062beb927fb57b7a874f3982a6792174.svg",
@@ -17,10 +17,10 @@
     "index.html": "/DamarAgrotrade/index.html",
     "static/media/arrow.svg": "/DamarAgrotrade/static/media/arrow.c09b7b3b90eb8a7aba7efc2fca37f580.svg",
     "main.41820338.css.map": "/DamarAgrotrade/static/css/main.41820338.css.map",
-    "main.0f1d097b.js.map": "/DamarAgrotrade/static/js/main.0f1d097b.js.map"
+    "main.3cd08331.js.map": "/DamarAgrotrade/static/js/main.3cd08331.js.map"
   },
   "entrypoints": [
     "static/css/main.41820338.css",
-    "static/js/main.0f1d097b.js"
+    "static/js/main.3cd08331.js"
   ]
 }
