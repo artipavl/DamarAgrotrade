@@ -8,6 +8,10 @@ type HeaderBoxProps = {
 export const HeaderBox = styled.div<HeaderBoxProps>`
   position: relative;
   background-color: ${props => (props.menu ? '#347053' : '#1e6140')};
+
+  @media (min-width: 1140px) {
+    background-color: #1e6140;
+  }
 `;
 
 export const Nav = styled.nav`
