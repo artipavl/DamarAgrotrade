@@ -31,7 +31,7 @@ function Header() {
 
   return (
     <header>
-      <HeaderBox>
+      <HeaderBox menu={menu}>
         <Box>
           <Nav>
             <NavMenu>
@@ -64,7 +64,7 @@ function Header() {
             </MenuBtn>
           </Nav>
         </Box>
-        {menu && <MobileMenu></MobileMenu>}
+        {menu && <MobileMenu />}
       </HeaderBox>
       <Box>
         <HeaderInform>

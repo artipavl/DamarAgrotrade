@@ -1,9 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const HeaderBox = styled.div`
+type HeaderBoxProps = {
+  menu: boolean;
+};
+
+export const HeaderBox = styled.div<HeaderBoxProps>`
   position: relative;
-  background-color: #1e6140;
+  background-color: ${props => (props.menu ? '#347053' : '#1e6140')};
 `;
 
 export const Nav = styled.nav`
