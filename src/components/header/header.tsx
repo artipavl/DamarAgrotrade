@@ -39,25 +39,25 @@ function Header() {
                 <NavMenuLink to="/">Про нас</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/">Каталог продукції</NavMenuLink>
+                <NavMenuLink to="/k">Каталог продукції</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/">Оплата і доставка</NavMenuLink>
+                <NavMenuLink to="/o">Оплата і доставка</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/">Партнери</NavMenuLink>
+                <NavMenuLink to="/p">Партнери</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/">Новини</NavMenuLink>
+                <NavMenuLink to="/n">Новини</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/">Контакти</NavMenuLink>
+                <NavMenuLink to="/k">Контакти</NavMenuLink>
               </li>
             </NavMenu>
             <NavUser>
-              <NavMenuLink to="/">Вхід</NavMenuLink>
+              <NavMenuLink to="/v">Вхід</NavMenuLink>
               <span>|</span>
-              <NavMenuLink to="/">Реестрація</NavMenuLink>
+              <NavMenuLink to="/r">Реестрація</NavMenuLink>
             </NavUser>
             <MenuBtn type="button" onClick={() => setMenu(menu => !menu)}>
               {menu ? <Cancel></Cancel> : <Menu></Menu>}

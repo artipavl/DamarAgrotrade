@@ -36,6 +36,12 @@ export const NavMenuLink = styled(NavLink)`
   line-height: 1.25;
 
   color: #ffffff;
+
+  &.active,
+  :hover,
+  :focus {
+    color: #84be51;
+  }
 `;
 
 export const NavUser = styled.div`
