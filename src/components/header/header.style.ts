@@ -36,6 +36,8 @@ export const NavMenu = styled.ul`
 export const NavMenuLink = styled(NavLink)`
   display: flex;
   height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   align-items: center;
 
@@ -52,6 +54,63 @@ export const NavMenuLink = styled(NavLink)`
   }
 `;
 
+export const NaveSelector = styled.li`
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  padding-right: 10px;
+  :hover,
+  :focus {
+    background-color: #347153;
+    & > ul {
+      display: flex;
+    }
+    & > svg {
+      rotate: calc(180deg);
+    }
+  }
+`;
+
+export const NaveSelectorList = styled.ul`
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+
+  width: 220px;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+
+  background-color: #347153;
+  border-radius: 0px 0px 20px 20px;
+`;
+
+export const NaveSelectorLink = styled(NavLink)`
+  display: flex;
+  height: 50px;
+  padding-left: 10px;
+
+  align-items: center;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: #ffffff;
+
+  &.active,
+  :hover,
+  :focus {
+    color: #84be51;
+  }
+`;
 export const NavUser = styled.div`
   display: flex;
   flex-direction: row;

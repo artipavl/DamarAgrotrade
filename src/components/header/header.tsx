@@ -9,6 +9,9 @@ import {
   NavUser,
   LinkBox,
   HeaderInform,
+  NaveSelector,
+  NaveSelectorList,
+  NaveSelectorLink,
 } from './header.style';
 
 import { ReactComponent as Cancel } from '../../img/cancel.svg';
@@ -18,6 +21,7 @@ import { ReactComponent as Farmer } from '../../img/farmer.svg';
 import { ReactComponent as Fertilizer } from '../../img/fertilizer.svg';
 import { ReactComponent as Frame } from '../../img/frame.svg';
 import { ReactComponent as Sapling } from '../../img/sapling.svg';
+import { ReactComponent as Arrow } from '../../img/arrow.svg';
 
 import LinkButton from '../linkButton/linkButton';
 import PhoneBox from '../phoneBox/phoneBox';
@@ -35,9 +39,20 @@ function Header() {
         <Box>
           <Nav>
             <NavMenu>
-              <li>
-                <NavMenuLink to="/">Про нас</NavMenuLink>
-              </li>
+              <NaveSelector>
+                <NaveSelectorLink to="/">Про нас</NaveSelectorLink> <Arrow />
+                <NaveSelectorList>
+                  <li>
+                    <NavMenuLink to="/n">Наша команда</NavMenuLink>
+                  </li>
+                  <li>
+                    <NavMenuLink to="/p">Партнери</NavMenuLink>
+                  </li>
+                  <li>
+                    <NavMenuLink to="/d">Договір</NavMenuLink>
+                  </li>
+                </NaveSelectorList>
+              </NaveSelector>
               <li>
                 <NavMenuLink to="/k">Каталог продукції</NavMenuLink>
               </li>
