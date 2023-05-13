@@ -75,6 +75,7 @@ function Header() {
             color="#8C3213"
             hovercolor="#fff"
             bgc="#ffffff"
+            textColor="#000000"
           />
           <UserShopping color="#8C3213" hovercolor="#fff" />
         </HeaderInform>
