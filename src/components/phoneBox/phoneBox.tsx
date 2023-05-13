@@ -24,6 +24,7 @@ type PhoneBoxProps = {
   hovercolor: string;
   bgc: string;
   phoneColor?: string;
+  textColor: string;
   render?: boolean;
 };
 
@@ -31,6 +32,8 @@ const PhoneBox: FC<PhoneBoxProps> = ({
   render,
   bgc,
   phoneColor,
+  hovercolor,
+  textColor,
   ...buttonStyle
 }) => {
   const [currentPhone, setCurrentPhone] = useState(phones[0]);
@@ -42,11 +45,11 @@ const PhoneBox: FC<PhoneBoxProps> = ({
         <EllipseButton
           {...buttonStyle}
           to={`tel:${currentPhone}`}
-          hovercolor="#fff"
+          hovercolor={hovercolor}
           svg={Call}
         />
         <div>
-          <PhoneSelect>
+          <PhoneSelect textColor={textColor}>
             {currentPhone}
             <SelectButton
               type="button"
@@ -62,6 +65,7 @@ const PhoneBox: FC<PhoneBoxProps> = ({
             {phones.map((phone, index) => (
               <PhoneItem
                 active={currentPhone === phone}
+                textColor={textColor}
                 key={index}
                 onClick={() => {
                   setCurrentPhone(phone);

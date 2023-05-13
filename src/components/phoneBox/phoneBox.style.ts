@@ -39,9 +39,14 @@ export const PhoneDiv = styled.div<PhoneDivProps>`
   border-radius: ${props => props.modal && `20px`};
 `;
 
-export const PhoneSelect = styled.div`
+type PhoneSelectProps = {
+  textColor: string;
+};
+
+export const PhoneSelect = styled.div<PhoneSelectProps>`
   display: flex;
   gap: 3px;
+  color: ${props => props.textColor};
 `;
 
 export const LinkContakt = styled(Link)`
@@ -72,11 +77,14 @@ export const PhoneList = styled.ul<PhoneListProps>`
   gap: 13px;
   margin-top: 17px;
 `;
+
 type PhoneItemProps = {
   active: boolean;
+  textColor: string;
 };
+
 export const PhoneItem = styled.li<PhoneItemProps>`
-  color: ${props => props.active && '#84be51'};
+  color: ${props => (props.active ? '#84be51' : props.textColor)};
   :hover,
   :focus {
     cursor: pointer;
