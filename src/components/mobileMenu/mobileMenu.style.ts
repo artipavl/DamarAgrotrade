@@ -8,7 +8,6 @@ export const MobileBox = styled.div`
   z-index: 1;
 
   width: 100%;
-  padding-top: 10px;
   min-height: calc(100vh - 50px);
 
   background-color: #1e6140;
@@ -23,12 +22,9 @@ export const MobileComponent = styled.div`
   width: 290px;
   justify-content: space-between;
   margin: auto;
-  :first-child {
-    margin-bottom: 10px;
-  }
-  :not(:first-child) {
-    margin-bottom: 20px;
-  }
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 10px;
 `;
 
 export const Nave = styled.nav`
