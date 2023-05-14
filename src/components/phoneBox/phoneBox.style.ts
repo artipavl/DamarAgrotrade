@@ -18,6 +18,7 @@ export const PhoneContainer = styled.div<PhoneContainerProps>`
   position: relative;
   width: 280px;
   height: 41px;
+  z-index: 1;
   @media (max-width: 1140px) {
     display: ${props => props.render === false && 'none'};
   }

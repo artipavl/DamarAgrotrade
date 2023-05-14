@@ -49,13 +49,12 @@ const PhoneBox: FC<PhoneBoxProps> = ({
           svg={Call}
         />
         <div>
-          <PhoneSelect textColor={textColor}>
+          <PhoneSelect
+            textColor={textColor}
+            onClick={() => setModal(modal => !modal)}
+          >
             {currentPhone}
-            <SelectButton
-              type="button"
-              modal={modal}
-              onClick={() => setModal(modal => !modal)}
-            >
+            <SelectButton type="button" modal={modal}>
               <Arrow color="#84BE51" />
             </SelectButton>
           </PhoneSelect>
