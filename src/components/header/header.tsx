@@ -7,7 +7,6 @@ import {
   NavMenu,
   NavMenuLink,
   NavUser,
-  LinkBox,
   HeaderInform,
   NaveSelector,
   NaveSelectorList,
@@ -16,19 +15,15 @@ import {
 
 import { ReactComponent as Cancel } from '../../img/cancel.svg';
 import { ReactComponent as Menu } from '../../img/menu.svg';
-import { ReactComponent as Seeds } from '../../img/seeds.svg';
-import { ReactComponent as Farmer } from '../../img/farmer.svg';
-import { ReactComponent as Fertilizer } from '../../img/fertilizer.svg';
-import { ReactComponent as Frame } from '../../img/frame.svg';
-import { ReactComponent as Sapling } from '../../img/sapling.svg';
+
 import { ReactComponent as Arrow } from '../../img/arrow.svg';
 
-import LinkButton from '../linkButton/linkButton';
 import PhoneBox from '../phoneBox/phoneBox';
 import QueryForm from '../queryForm/queryForm';
 import UserShopping from '../userShopping/userShopping';
 import Logo from '../logo/logo';
 import MobileMenu from '../mobileMenu/mobileMenu';
+import Services from '../services/services';
 
 function Header() {
   const [menu, setMenu] = useState(false);
@@ -40,7 +35,8 @@ function Header() {
           <Nav>
             <NavMenu>
               <NaveSelector>
-                <NaveSelectorLink to="/">Про нас</NaveSelectorLink> <Arrow />
+                <NaveSelectorLink to="/">Про нас</NaveSelectorLink>{' '}
+                <Arrow color="#84BE51" />
                 <NaveSelectorList>
                   <li>
                     <NavMenuLink to="/n">Наша команда</NavMenuLink>
@@ -96,23 +92,7 @@ function Header() {
         </HeaderInform>
       </Box>
       <Box>
-        <LinkBox>
-          <li>
-            <LinkButton to="/" img={Seeds} text="Насіння" />
-          </li>
-          <li>
-            <LinkButton to="/" img={Sapling} text="Засоби захисту рослин" />
-          </li>
-          <li>
-            <LinkButton to="/" img={Fertilizer} text="Добрива" />
-          </li>
-          <li>
-            <LinkButton to="/" img={Frame} text="кормова група" />
-          </li>
-          <li>
-            <LinkButton to="/" img={Farmer} text="Агроному в поміч" />
-          </li>
-        </LinkBox>
+        <Services />
       </Box>
     </header>
   );

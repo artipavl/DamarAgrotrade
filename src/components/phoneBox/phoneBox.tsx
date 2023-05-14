@@ -56,7 +56,7 @@ const PhoneBox: FC<PhoneBoxProps> = ({
               modal={modal}
               onClick={() => setModal(modal => !modal)}
             >
-              <Arrow />
+              <Arrow color="#84BE51" />
             </SelectButton>
           </PhoneSelect>
 

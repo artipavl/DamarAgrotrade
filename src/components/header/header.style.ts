@@ -133,17 +133,6 @@ export const MenuBtn = styled.button`
   }
 `;
 
-export const LinkBox = styled.ul`
-  /* display: none; */
-
-  /* @media (min-width: 1140px) { */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 10px;
-  /* } */
-`;
-
 export const HeaderInform = styled.div`
   display: flex;
   flex-direction: row;
