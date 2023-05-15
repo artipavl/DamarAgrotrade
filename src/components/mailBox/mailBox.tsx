@@ -35,7 +35,7 @@ const MailBox: FC<MailBoxProps> = ({
   const [modal, setModal] = useState(false);
 
   return (
-    <MailContainer render={render}>
+    <MailContainer render={render} modal={modal}>
       <MailDiv modal={modal} bgc={bgc} mailColor={mailColor}>
         <EllipseButton
           {...buttonStyle}

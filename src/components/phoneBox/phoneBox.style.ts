@@ -6,6 +6,7 @@ type PhoneListProps = {
 };
 type PhoneContainerProps = {
   render?: boolean;
+  modal: boolean;
 };
 
 type PhoneDivProps = {
@@ -18,14 +19,13 @@ export const PhoneContainer = styled.div<PhoneContainerProps>`
   position: relative;
   width: 280px;
   height: 41px;
-  z-index: 1;
+  z-index: ${props => props.modal && 1};
   @media (max-width: 1140px) {
     display: ${props => props.render === false && 'none'};
   }
 `;
 export const PhoneDiv = styled.div<PhoneDivProps>`
   position: ${props => (props.modal ? 'absolute' : 'static')};
-  /* top: -30.5px; */
   top: -10px;
   left: ${props => props.modal && '-10px'};
   display: flex;

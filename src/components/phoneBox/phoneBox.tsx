@@ -40,7 +40,7 @@ const PhoneBox: FC<PhoneBoxProps> = ({
   const [modal, setModal] = useState(false);
 
   return (
-    <PhoneContainer render={render}>
+    <PhoneContainer render={render} modal={modal}>
       <PhoneDiv modal={modal} bgc={bgc} phoneColor={phoneColor}>
         <EllipseButton
           {...buttonStyle}

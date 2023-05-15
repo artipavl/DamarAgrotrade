@@ -5,6 +5,7 @@ type MailListProps = {
 };
 type MailContainerProps = {
   render?: boolean;
+  modal: boolean;
 };
 
 type MailDivProps = {
@@ -17,7 +18,7 @@ export const MailContainer = styled.div<MailContainerProps>`
   position: relative;
   width: 280px;
   height: 41px;
-  z-index: 1;
+  z-index: ${props => props.modal && 1};
   @media (max-width: 1140px) {
     display: ${props => props.render === false && 'none'};
   }
