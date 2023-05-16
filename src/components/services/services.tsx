@@ -7,7 +7,7 @@ import { ReactComponent as Frame } from '../../img/frame.svg';
 import { ReactComponent as Sapling } from '../../img/sapling.svg';
 import { ReactComponent as Arrow } from '../../img/arrow.svg';
 
-import LinkButton from '../linkButton/linkButton';
+import LinkImgButton from '../linkImgButton/linkImgButton';
 import {
   LinkBox,
   ServicesSelector,
@@ -29,19 +29,19 @@ const Services: FC<ServicesProps> = props => {
         </ServicesSelector>
         <LinkBox open={open}>
           <li>
-            <LinkButton to="/" img={Seeds} text="Насіння" />
+            <LinkImgButton to="/" img={Seeds} text="Насіння" />
           </li>
           <li>
-            <LinkButton to="/" img={Sapling} text="Засоби захисту рослин" />
+            <LinkImgButton to="/" img={Sapling} text="Засоби захисту рослин" />
           </li>
           <li>
-            <LinkButton to="/" img={Fertilizer} text="Добрива" />
+            <LinkImgButton to="/" img={Fertilizer} text="Добрива" />
           </li>
           <li>
-            <LinkButton to="/" img={Frame} text="кормова група" />
+            <LinkImgButton to="/" img={Frame} text="кормова група" />
           </li>
           <li>
-            <LinkButton to="/" img={Farmer} text="Агроному в поміч" />
+            <LinkImgButton to="/" img={Farmer} text="Агроному в поміч" />
           </li>
         </LinkBox>
       </SelectorBox>

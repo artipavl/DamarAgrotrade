@@ -21,6 +21,7 @@ export const SelectorBox = styled.div<OpenProps>`
   top: ${props => props.open && '-10px'};
   left: ${props => props.open && '-10px'};
   padding: ${props => props.open && '10px'};
+  z-index: ${props => props.open && '2'};
 
   background-color: ${props => props.open && '#fff'};
   box-shadow: ${props => props.open && `0px 0px 8px rgba(0, 0, 0, 0.15)`};
