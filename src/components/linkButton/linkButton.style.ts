@@ -3,37 +3,27 @@ import styled from 'styled-components';
 
 export const LinkBtn = styled(NavLink)`
   display: flex;
-  width: 200px;
-  height: 40px;
+  width: 290px;
+  height: 47px;
   padding: 0 15px;
 
   align-items: center;
   justify-content: center;
-  gap: 10px;
 
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.2;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
 
-  color: #000000;
+  color: #ffffff;
 
-  border: 1px solid #1e6140;
+  background: #e74e13;
+
+  border: 1px solid #e74e13;
   border-radius: 20px;
-  > svg {
-    color: #84be51;
-  }
+
   :hover,
   :focus {
-    color: #ffffff;
-    background: #e74e13;
-    border-color: #e74e13;
-    > svg {
-      color: #ffffff;
-    }
+    color: #e74e13;
+    background: #ffffff;
   }
-  /* &.active {
-    color: #000000;
-  } */
 `;
-
