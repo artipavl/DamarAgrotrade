@@ -43,4 +43,9 @@ export const H2 = styled.h2<H2Props>`
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  @media (min-width: 1440px) {
+    font-size: 45px;
+    line-height: 55px;
+  }
 `;
