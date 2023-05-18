@@ -35,6 +35,11 @@ export const AboutContent = styled.div`
       margin-top: 30px;
     }
   }
+  @media (min-width: 1440px) {
+    &:first-child {
+      margin-bottom: 25px;
+    }
+  }
 `;
 
 export const Text = styled.p`
