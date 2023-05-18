@@ -29,6 +29,12 @@ export const H2 = styled.h2<H2Props>`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media (min-width: 1440px) {
+      width: 32px;
+      height: 25px;
+      margin-right: 17px;
+      margin-bottom: 12.5px;
+    }
   }
 
   &::after {
@@ -42,6 +48,12 @@ export const H2 = styled.h2<H2Props>`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media (min-width: 1440px) {
+      width: 32px;
+      height: 25px;
+      margin-left: 17px;
+      margin-bottom: 12.5px;
+    }
   }
 
   @media (min-width: 1440px) {
