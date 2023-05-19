@@ -20,6 +20,7 @@ export const BgImg = styled.div<BgImgPrpps>`
 
   background-repeat: no-repeat;
   background-position: left top;
+  background-size: cover;
 
   @media (min-width: 1440px) {
     background-position: left bottom;
