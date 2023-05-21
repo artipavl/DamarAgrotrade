@@ -5,12 +5,14 @@ import About from '../../components/about/about';
 import AboutSection from '../../components/seeds/aboutSection';
 
 import BG from '../../img/happyFarmer.jpg';
+import Actions from '../../components/actions/actions';
 
 function Home() {
   return (
     <>
       <Hero />
       <About />
+      <Actions />
       <AboutSection
         title={'Семена'}
         texts={[
