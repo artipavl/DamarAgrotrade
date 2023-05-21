@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DamarAgrotrade/static/css/main.41820338.css",
-    "main.js": "/DamarAgrotrade/static/js/main.078bf1ff.js",
+    "main.js": "/DamarAgrotrade/static/js/main.de27554b.js",
     "static/media/happyFarmer.jpg": "/DamarAgrotrade/static/media/happyFarmer.db36845b87e46eb19e26.jpg",
     "static/media/about.png": "/DamarAgrotrade/static/media/about.bff92c81b7d68da26d92.png",
     "static/media/hero.jpg": "/DamarAgrotrade/static/media/hero.26d5cdbba1732cf2c27d.jpg",
@@ -9,6 +9,7 @@
     "static/media/wingBig1.png": "/DamarAgrotrade/static/media/wingBig1.b1c257dc4043a7211c35.png",
     "static/media/fertilizer.svg": "/DamarAgrotrade/static/media/fertilizer.9875105f0af131afffb8e8ed2c2e813d.svg",
     "static/media/wingBig.png": "/DamarAgrotrade/static/media/wingBig.118e92f0b3c7fa58bdde.png",
+    "static/media/Rectangle.png": "/DamarAgrotrade/static/media/Rectangle.d4449bd4929cd6f3e614.png",
     "static/media/frame.svg": "/DamarAgrotrade/static/media/frame.062beb927fb57b7a874f3982a6792174.svg",
     "static/media/seeds.svg": "/DamarAgrotrade/static/media/seeds.2c7a76cef9547a7f5ce6d2cf01bfcbe0.svg",
     "static/media/farmer.svg": "/DamarAgrotrade/static/media/farmer.419f04e996872e5322bd98b1f3a51dd3.svg",
@@ -24,10 +25,10 @@
     "static/media/arrow.svg": "/DamarAgrotrade/static/media/arrow.60bea92d4af5650cb409e1a16f86040e.svg",
     "static/media/mail.svg": "/DamarAgrotrade/static/media/mail.49a6a8ef33042542a7576108011362d5.svg",
     "main.41820338.css.map": "/DamarAgrotrade/static/css/main.41820338.css.map",
-    "main.078bf1ff.js.map": "/DamarAgrotrade/static/js/main.078bf1ff.js.map"
+    "main.de27554b.js.map": "/DamarAgrotrade/static/js/main.de27554b.js.map"
   },
   "entrypoints": [
     "static/css/main.41820338.css",
-    "static/js/main.078bf1ff.js"
+    "static/js/main.de27554b.js"
   ]
 }
