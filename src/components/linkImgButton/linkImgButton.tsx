@@ -7,7 +7,7 @@ type linkImgButtonProps = {
   img: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 
-const linkImgButton: FC<linkImgButtonProps> = ({ text, to, img: Img }) => {
+const LinkImgButton: FC<linkImgButtonProps> = ({ text, to, img: Img }) => {
   return (
     <LinkBtn to={to}>
       <Img width="24" />
@@ -16,4 +16,4 @@ const linkImgButton: FC<linkImgButtonProps> = ({ text, to, img: Img }) => {
   );
 };
 
-export default linkImgButton;
+export default LinkImgButton;
