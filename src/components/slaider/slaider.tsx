@@ -1,5 +1,10 @@
-import React, { FC, useState, useRef } from 'react';
-import { SliderBox, SliderList } from './slaider.style';
+import React, { FC, useState, useRef, useEffect } from 'react';
+import {
+  PerCentItem,
+  SliderBox,
+  SliderList,
+  SliderPerCent,
+} from './slaider.style';
 import Product from '../product/product';
 
 type SlaiderProps = {};
@@ -7,8 +12,22 @@ type SlaiderProps = {};
 const Slaider: FC<SlaiderProps> = props => {
   const [left, setLeft] = useState(0);
   const [xStart, setXStart] = useState(0);
+  const [current, setCurrent] = useState(1);
 
   const ul = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (left === 0) {
+      setCurrent(1);
+    } else if (
+      ul.current &&
+      left < -ul.current?.scrollWidth + ul.current?.clientWidth
+    ) {
+      setCurrent(5);
+    } else {
+      setCurrent(ul.current ? Math.ceil((left * -1) / (275 * (9 / 3))) + 1 : 1);
+    }
+  }, [left]);
 
   return (
     <SliderBox>
@@ -63,7 +82,23 @@ const Slaider: FC<SlaiderProps> = props => {
         <li>
           <Product />
         </li>
+        <li>
+          <Product />
+        </li>
+        <li>
+          <Product />
+        </li>
+        <li>
+          <Product />
+        </li>
       </SliderList>
+      <SliderPerCent current={current}>
+        <PerCentItem></PerCentItem>
+        <PerCentItem></PerCentItem>
+        <PerCentItem></PerCentItem>
+        <PerCentItem></PerCentItem>
+        <PerCentItem></PerCentItem>
+      </SliderPerCent>
     </SliderBox>
   );
 };

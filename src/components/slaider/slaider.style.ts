@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const SliderBox = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   width: 100%;
-  height: 355px;
   overflow: hidden;
 `;
 
@@ -11,29 +13,8 @@ type SliderListProps = {
   left: number;
 };
 
-// export const SliderList = styled.ul<SliderListProps>`
-//   /* left: ${props => props.left}px; */
-
-//   display: flex;
-//   width: 100%;
-//   scroll-snap-type: x proximity;
-//   overflow-x: scroll;
-
-//   & > li {
-//     padding-left: 60px;
-//     margin-left: -30px;
-//     scroll-snap-align: start;
-//     :first-of-type {
-//       margin-left: 60px;
-//     }
-//     :last-of-type {
-//       margin-right: 60px;
-//     }
-//   }
-// `;
-
 export const SliderList = styled.ul<SliderListProps>`
-  position: absolute;
+  position: relative;
   left: ${props => props.left}px;
 
   display: flex;
@@ -47,4 +28,31 @@ export const SliderList = styled.ul<SliderListProps>`
       margin-right: 32.5px;
     }
   }
+`;
+
+type SliderPerCentProps = {
+  current?: number;
+};
+
+export const SliderPerCent = styled.ul<SliderPerCentProps>`
+  ${props =>
+    props.current &&
+    `
+ > li:nth-child(${props.current}) {
+    background: #ffffff;
+    height: 30px;
+  }
+`}
+  display: flex;
+  height: 30px;
+  gap: 10px;
+  margin: auto;
+  align-items: end;
+`;
+
+export const PerCentItem = styled.li`
+  width: 6px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
 `;
