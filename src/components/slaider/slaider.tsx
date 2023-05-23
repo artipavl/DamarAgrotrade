@@ -4,8 +4,14 @@ import {
   SliderBox,
   SliderList,
   SliderPerCent,
+  SliderListBox,
+  SliderButton,
+  SliderContainer,
 } from './slaider.style';
+
 import Product from '../product/product';
+
+import { ReactComponent as Arrow } from '../../img/arrowSlaider.svg';
 
 type SlaiderProps = {};
 
@@ -21,77 +27,104 @@ const Slaider: FC<SlaiderProps> = props => {
       setCurrent(1);
     } else if (
       ul.current &&
-      left < -ul.current?.scrollWidth + ul.current?.clientWidth
+      left <= -ul.current?.scrollWidth + ul.current?.clientWidth
     ) {
       setCurrent(5);
     } else {
-      setCurrent(ul.current ? Math.ceil((left * -1) / (275 * (9 / 3))) + 1 : 1);
+      const width = window.outerWidth > 1440 ? 285 : 275;
+      setCurrent(
+        ul.current ? Math.ceil((left * -1) / (width * (9 / 3))) + 1 : 1
+      );
     }
   }, [left]);
 
+  function swapItem(swap: boolean) {
+    const width = 255 + window.outerWidth > 1440 ? 285 : 275;
+    setLeft(left => {
+      let newLeft = left;
+
+      if (
+        ul.current?.clientWidth &&
+        swap &&
+        left > -ul.current?.scrollWidth + ul.current?.clientWidth
+      )
+        newLeft = newLeft - width;
+
+      if (ul.current?.clientWidth && !swap && newLeft < 0)
+        newLeft = newLeft + width;
+      return newLeft;
+    });
+  }
+
   return (
     <SliderBox>
-      <SliderList
-        ref={ul}
-        left={left}
-        onTouchStart={e => {
-          setXStart(e.changedTouches[0].clientX);
-        }}
-        onTouchEnd={e => {
-          setXStart(0);
+      <SliderContainer>
+        <SliderButton
+          type="button"
+          onClick={() => swapItem(false)}
+          disabled={current === 1}
+        >
+          <Arrow></Arrow>
+        </SliderButton>
 
-          const x = e.changedTouches[0].clientX;
+        <SliderListBox>
+          <SliderList
+            ref={ul}
+            left={left}
+            onTouchStart={e => {
+              setXStart(e.changedTouches[0].clientX);
+            }}
+            onTouchEnd={e => {
+              setXStart(0);
+              const x = e.changedTouches[0].clientX;
+              swapItem(xStart - x > 0);
+            }}
+          >
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+            <li>
+              <Product />
+            </li>
+          </SliderList>
+        </SliderListBox>
 
-          setLeft(left => {
-            let newLeft = left;
-
-            if (
-              ul.current?.clientWidth &&
-              xStart - x > 0 &&
-              left > -ul.current?.scrollWidth + ul.current?.clientWidth
-            )
-              newLeft = newLeft - 255 - 20;
-
-            if (ul.current?.clientWidth && xStart - x < 0 && newLeft < 0)
-              newLeft = newLeft + 255 + 20;
-            return newLeft;
-          });
-        }}
-      >
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-      </SliderList>
+        <SliderButton
+          type="button"
+          right
+          onClick={() => swapItem(true)}
+          disabled={current === 5}
+        >
+          <Arrow></Arrow>
+        </SliderButton>
+      </SliderContainer>
       <SliderPerCent current={current}>
         <PerCentItem></PerCentItem>
         <PerCentItem></PerCentItem>
