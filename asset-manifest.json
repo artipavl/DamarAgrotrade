@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DamarAgrotrade/static/css/main.41820338.css",
-    "main.js": "/DamarAgrotrade/static/js/main.168c5dc0.js",
+    "main.js": "/DamarAgrotrade/static/js/main.f37064d8.js",
     "static/media/happyFarmer.jpg": "/DamarAgrotrade/static/media/happyFarmer.db36845b87e46eb19e26.jpg",
     "static/media/about.png": "/DamarAgrotrade/static/media/about.bff92c81b7d68da26d92.png",
     "static/media/hero.jpg": "/DamarAgrotrade/static/media/hero.26d5cdbba1732cf2c27d.jpg",
@@ -20,15 +20,16 @@
     "static/media/comparison.svg": "/DamarAgrotrade/static/media/comparison.87b99bc00d105d8eed446a0de18ebfbf.svg",
     "static/media/menu.svg": "/DamarAgrotrade/static/media/menu.83ce2ad01074d31be716b0ea7ce92095.svg",
     "static/media/accent.svg": "/DamarAgrotrade/static/media/accent.f48db67b5b60056a2f565896c8f35eb3.svg",
+    "static/media/arrowSlaider.svg": "/DamarAgrotrade/static/media/arrowSlaider.6d09fdddf795d0569b354b0a3b75d4e4.svg",
     "static/media/loupe.svg": "/DamarAgrotrade/static/media/loupe.23f218d0db646ea3a887719f047196db.svg",
     "index.html": "/DamarAgrotrade/index.html",
     "static/media/arrow.svg": "/DamarAgrotrade/static/media/arrow.60bea92d4af5650cb409e1a16f86040e.svg",
     "static/media/mail.svg": "/DamarAgrotrade/static/media/mail.49a6a8ef33042542a7576108011362d5.svg",
     "main.41820338.css.map": "/DamarAgrotrade/static/css/main.41820338.css.map",
-    "main.168c5dc0.js.map": "/DamarAgrotrade/static/js/main.168c5dc0.js.map"
+    "main.f37064d8.js.map": "/DamarAgrotrade/static/js/main.f37064d8.js.map"
   },
   "entrypoints": [
     "static/css/main.41820338.css",
-    "static/js/main.168c5dc0.js"
+    "static/js/main.f37064d8.js"
   ]
 }
