@@ -10,7 +10,7 @@ export const SliderBox = styled.div`
 
   @media screen and (min-width: 1440px) {
     margin: auto;
-    width: 1440px;
+    width: 1410px;
     padding-left: 15px;
     padding-right: 15px;
   }
