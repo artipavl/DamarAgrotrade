@@ -5,6 +5,7 @@ import EllipseButton from '../ellipseButton/ellipseButton';
 import { ReactComponent as Shopping } from '../../img/shopping.svg';
 import { ReactComponent as Comparison } from '../../img/comparison.svg';
 import {
+  Button,
   ImgBox,
   InfoBox,
   InfoBoxKeality,
@@ -12,19 +13,29 @@ import {
   InfoBoxPrice,
   InfoBoxTitle,
   InfoBoxValue,
+  Number,
   ProductBox,
   ProductBoxComparison,
 } from './product.styly';
 
 import Rectangle from '../../img/product/Rectangle.png';
 
-type ProductProps = {};
+type ProductProps = {
+  numder?: number;
+};
 
-const Product: FC<ProductProps> = props => {
+const Product: FC<ProductProps> = ({ numder = 0 }) => {
   return (
     <ProductBox>
       <ProductBoxComparison>
-        <EllipseButton color="#8C3213" hovercolor="#fff" svg={Comparison} />
+        <Button>
+          <Comparison></Comparison>
+          {numder !== 0 && (
+            <Number>
+              <span>{numder}</span>
+            </Number>
+          )}
+        </Button>
       </ProductBoxComparison>
       <ImgBox>
         <img src={Rectangle} alt="asdas" height="132" width="97" />
