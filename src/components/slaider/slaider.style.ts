@@ -98,6 +98,8 @@ export const SliderList = styled.ul<SliderListProps>`
   @media screen and (min-width: 1440px) {
     gap: 30px;
   }
+
+  transition: all 1s linear;
 `;
 
 type SliderPerCentProps = {
@@ -118,6 +120,8 @@ export const SliderPerCent = styled.ul<SliderPerCentProps>`
   gap: 10px;
   margin: auto;
   align-items: end;
+
+  /* transition: all 1s linear; */
 `;
 
 export const PerCentItem = styled.li`
@@ -125,4 +129,6 @@ export const PerCentItem = styled.li`
   height: 16px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+
+  transition: all 1s linear;
 `;
