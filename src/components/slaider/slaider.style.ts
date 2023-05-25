@@ -4,7 +4,6 @@ export const SliderBox = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   width: 100%;
   overflow: hidden;
 
@@ -20,14 +19,20 @@ export const SliderContainer = styled.div`
   @media screen and (min-width: 1440px) {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 `;
 
 export const SliderListBox = styled.div`
+  padding-top: 17px;
+  padding-bottom: 17px;
   @media screen and (min-width: 1440px) {
     overflow: hidden;
-    width: 1110px;
+    width: 1170px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 `;
 
@@ -104,6 +109,7 @@ export const SliderList = styled.ul<SliderListProps>`
 
 type SliderPerCentProps = {
   current?: number;
+  accent?: boolean;
 };
 
 export const SliderPerCent = styled.ul<SliderPerCentProps>`
@@ -111,7 +117,7 @@ export const SliderPerCent = styled.ul<SliderPerCentProps>`
     props.current &&
     `
  > li:nth-child(${props.current}) {
-    background: #ffffff;
+    background: ${props.accent ? '#8D3200' : '#ffffff'};
     height: 30px;
   }
 `}
@@ -120,14 +126,13 @@ export const SliderPerCent = styled.ul<SliderPerCentProps>`
   gap: 10px;
   margin: auto;
   align-items: end;
-
-  /* transition: all 1s linear; */
 `;
 
-export const PerCentItem = styled.li`
+export const PerCentItem = styled.li<SliderPerCentProps>`
   width: 6px;
   height: 16px;
-  background: rgba(255, 255, 255, 0.1);
+  background: ${props =>
+    props.accent ? 'rgba(141, 50, 0, 0.1)' : 'rgba(255, 255, 255, 0.1)'};
   border-radius: 20px;
 
   transition: all 1s linear;

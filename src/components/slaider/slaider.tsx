@@ -13,9 +13,11 @@ import Product from '../product/product';
 
 import { ReactComponent as Arrow } from '../../img/arrowSlaider.svg';
 
-type SlaiderProps = {};
+type SlaiderProps = {
+  accent?: boolean;
+};
 
-const Slaider: FC<SlaiderProps> = props => {
+const Slaider: FC<SlaiderProps> = ({ accent = false }) => {
   const [left, setLeft] = useState(0);
   const [xStart, setXStart] = useState(0);
   const [current, setCurrent] = useState(1);
@@ -77,7 +79,7 @@ const Slaider: FC<SlaiderProps> = props => {
             onTouchEnd={e => {
               setXStart(0);
               const x = e.changedTouches[0].clientX;
-              swapItem(xStart - x > 0);
+              if (xStart !== x) swapItem(xStart - x > 0);
             }}
           >
             <li>
@@ -125,12 +127,12 @@ const Slaider: FC<SlaiderProps> = props => {
           <Arrow></Arrow>
         </SliderButton>
       </SliderContainer>
-      <SliderPerCent current={current}>
-        <PerCentItem></PerCentItem>
-        <PerCentItem></PerCentItem>
-        <PerCentItem></PerCentItem>
-        <PerCentItem></PerCentItem>
-        <PerCentItem></PerCentItem>
+      <SliderPerCent current={current} accent={accent}>
+        <PerCentItem accent={accent}></PerCentItem>
+        <PerCentItem accent={accent}></PerCentItem>
+        <PerCentItem accent={accent}></PerCentItem>
+        <PerCentItem accent={accent}></PerCentItem>
+        <PerCentItem accent={accent}></PerCentItem>
       </SliderPerCent>
     </SliderBox>
   );

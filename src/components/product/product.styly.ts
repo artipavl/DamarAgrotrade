@@ -10,8 +10,13 @@ export const ProductBox = styled.div`
   padding: 10px;
   background: #ffffff;
 
-  box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15); */
   border-radius: 20px;
+
+  :hover,
+  :focus {
+    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
+  }
 `;
 export const ProductBoxComparison = styled.div`
   position: absolute;
