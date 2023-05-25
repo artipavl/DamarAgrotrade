@@ -6,7 +6,7 @@ export const ServicesBox = styled.div`
   height: 40px;
   margin: auto;
 
-  @media (min-width: 480px) {
+  @media (min-width: 1110px) {
     width: 100%;
     height: inherit;
   }
@@ -27,7 +27,7 @@ export const SelectorBox = styled.div<OpenProps>`
   box-shadow: ${props => props.open && `0px 0px 8px rgba(0, 0, 0, 0.15)`};
   border-radius: ${props => props.open && `20px`};
 
-  @media (min-width: 480px) {
+  @media (min-width: 1110px) {
     position: static;
     padding: 0;
     background: none;
@@ -71,7 +71,7 @@ export const ServicesSelector = styled.div<OpenProps>`
       color: #000000;
     }
   }
-  @media (min-width: 480px) {
+  @media (min-width: 1110px) {
     display: none;
   }
 `;
@@ -81,7 +81,7 @@ export const LinkBox = styled.ul<OpenProps>`
   flex-direction: column;
   gap: 10px;
 
-  @media (min-width: 480px) {
+  @media (min-width: 1110px) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

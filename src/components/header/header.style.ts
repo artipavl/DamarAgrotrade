@@ -5,6 +5,14 @@ type HeaderBoxProps = {
   menu: boolean;
 };
 
+export const HedetPosition = styled.header`
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+`;
+
 export const HeaderBox = styled.div<HeaderBoxProps>`
   position: relative;
   background-color: ${props => (props.menu ? '#347053' : '#1e6140')};
@@ -75,7 +83,7 @@ export const NaveSelector = styled.li`
 
 export const NaveSelectorList = styled.ul`
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 50px;
   left: 0;
   display: none;

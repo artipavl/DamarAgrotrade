@@ -11,6 +11,7 @@ import {
   NaveSelector,
   NaveSelectorList,
   NaveSelectorLink,
+  HedetPosition,
 } from './header.style';
 
 import { ReactComponent as Cancel } from '../../img/cancel.svg';
@@ -29,7 +30,7 @@ function Header() {
   const [menu, setMenu] = useState(false);
 
   return (
-    <header>
+    <HedetPosition>
       <HeaderBox menu={menu}>
         <Box>
           <Nav>
@@ -94,7 +95,7 @@ function Header() {
       <Box>
         <Services />
       </Box>
-    </header>
+    </HedetPosition>
   );
 }
 
