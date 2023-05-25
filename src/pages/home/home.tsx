@@ -1,17 +1,17 @@
-import React from 'react';
-
 import Hero from '../../components/hero/hero';
 import About from '../../components/about/about';
 import AboutSection from '../../components/seeds/aboutSection';
 
 import BG from '../../img/happyFarmer.jpg';
 import Actions from '../../components/actions/actions';
+import Novelty from '../../components/novelty/novelty';
 
 function Home() {
   return (
     <>
       <Hero />
       <About />
+      <Novelty />
       <Actions />
       <AboutSection
         title={'Семена'}
