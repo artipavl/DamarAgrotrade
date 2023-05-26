@@ -5,6 +5,7 @@ import AboutSection from '../../components/seeds/aboutSection';
 import BG from '../../img/happyFarmer.jpg';
 import Actions from '../../components/actions/actions';
 import Novelty from '../../components/novelty/novelty';
+import Partners from '../../components/partners/partners';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <About />
       <Novelty />
       <Actions />
+      <Partners />
       <AboutSection
         title={'Семена'}
         texts={[
