@@ -15,9 +15,10 @@ import { ReactComponent as Arrow } from '../../img/arrowSlaider.svg';
 
 type SlaiderProps = {
   accent?: boolean;
+  overflow?: string;
 };
 
-const Slaider: FC<SlaiderProps> = ({ accent = false }) => {
+const Slaider: FC<SlaiderProps> = ({ accent = false, overflow = 'hidden' }) => {
   const [left, setLeft] = useState(0);
   const [xStart, setXStart] = useState(0);
   const [current, setCurrent] = useState(1);
@@ -59,7 +60,7 @@ const Slaider: FC<SlaiderProps> = ({ accent = false }) => {
   }
 
   return (
-    <SliderBox>
+    <SliderBox overflow={overflow}>
       <SliderContainer>
         <SliderButton
           type="button"
@@ -69,7 +70,7 @@ const Slaider: FC<SlaiderProps> = ({ accent = false }) => {
           <Arrow></Arrow>
         </SliderButton>
 
-        <SliderListBox>
+        <SliderListBox overflow={overflow}>
           <SliderList
             ref={ul}
             left={left}

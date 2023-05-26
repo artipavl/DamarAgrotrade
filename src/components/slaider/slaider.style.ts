@@ -1,6 +1,9 @@
 import styled from 'styled-components';
+type SliderListBoxProps = {
+  overflow?: string;
+};
 
-export const SliderBox = styled.div`
+export const SliderBox = styled.div<SliderListBoxProps>`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,9 +12,21 @@ export const SliderBox = styled.div`
 
   @media screen and (min-width: 1440px) {
     margin: auto;
-    width: 1410px;
-    padding-left: 15px;
-    padding-right: 15px;
+
+    ${props =>
+      props.overflow === 'visible'
+        ? `width: 100%; 
+      & button {
+        &:first-child {
+          margin-left: auto;
+          margin-right: 50px;
+        }
+        &:last-child {
+          margin-left: 50px;
+          margin-right: auto;
+        }
+      }`
+        : `max-width: 1410px; padding: 0 15px 0 15px`};
   }
 `;
 
@@ -19,20 +34,21 @@ export const SliderContainer = styled.div`
   @media screen and (min-width: 1440px) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* margin: auto; */
   }
 `;
 
-export const SliderListBox = styled.div`
+export const SliderListBox = styled.div<SliderListBoxProps>`
   padding-top: 17px;
   padding-bottom: 17px;
   @media screen and (min-width: 1440px) {
-    overflow: hidden;
-    width: 1170px;
+    ${props =>
+      props.overflow ? `overflow: ${props.overflow};` : `overflow: hidden;`};
+    width: 1140px;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 `;
 
@@ -42,13 +58,15 @@ type SliderButtonProps = {
 
 export const SliderButton = styled.button<SliderButtonProps>`
   display: none;
-
-  ${props => props.right && `transform: rotate(180deg);  `}
+  z-index: 2;
 
   @media screen and (min-width: 1440px) {
     display: flex;
     width: 70px;
     height: 70px;
+
+    margin-right: auto;
+
     align-items: center;
     justify-content: center;
 
@@ -56,6 +74,11 @@ export const SliderButton = styled.button<SliderButtonProps>`
     border: 1px solid #84c551;
 
     color: #84c551;
+    ${props =>
+      props.right &&
+      ` & > svg {
+      transform: rotate(180deg);
+    } margin: 0; margin-left: auto;`};
 
     :hover,
     :focus {
