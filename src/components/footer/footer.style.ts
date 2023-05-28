@@ -5,6 +5,37 @@ export const FooterBox = styled.footer`
   margin-top: auto;
 `;
 
+type UpButtonProps = {
+  opacity: number;
+};
+
+export const UpButton = styled.button<UpButtonProps>`
+  position: fixed;
+  right: 13px;
+  bottom: 0;
+  z-index: 3;
+
+  display: flex;
+  width: 65px;
+  height: 110px;
+  opacity: ${({ opacity }) => opacity};
+  padding-top: 30px;
+  background-color: #84c551;
+  color: #ffffff;
+  border-radius: 30px 30px 0px 0px;
+  justify-content: center;
+
+  :hover,
+  :focus {
+    color: rgb(231, 78, 19);
+  }
+
+  @media (min-width: 1140px) {
+    right: 24px;
+    height: 130px;
+  }
+`;
+
 export const FooterMain = styled.div`
   display: flex;
   flex-direction: column;

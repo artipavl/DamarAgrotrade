@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import {
   FooterBox,
   FooterInform,
@@ -7,6 +7,7 @@ import {
   FooterMain,
   FooterTitle,
   Inform,
+  UpButton,
 } from './footer.style';
 import Logo from '../logo/logo';
 
@@ -14,9 +15,29 @@ import PhoneBox from '../phoneBox/phoneBox';
 import Box from '../Box/box';
 import MailBox from '../mailBox/mailBox';
 
+import { ReactComponent as Arrow } from '../../img/arrowSlaider.svg';
+
 type FooterProps = {};
 
 const Footer: FC<FooterProps> = props => {
+  const [opascityButton, setOpascityButton] = useState<number>(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.pageYOffset > 500) {
+        setOpascityButton(1);
+      } else {
+        setOpascityButton(0);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <FooterBox>
       <Box>
@@ -87,6 +108,18 @@ const Footer: FC<FooterProps> = props => {
           <Inform>© 2022 DAT</Inform>
         </>
       </Box>
+      <UpButton
+        type="button"
+        opacity={opascityButton}
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          })
+        }
+      >
+        <Arrow style={{ transform: 'rotate(90deg)' }} />
+      </UpButton>
     </FooterBox>
   );
 };
