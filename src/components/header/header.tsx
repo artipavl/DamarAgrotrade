@@ -36,40 +36,40 @@ function Header() {
           <Nav>
             <NavMenu>
               <NaveSelector>
-                <NaveSelectorLink to="/">Про нас</NaveSelectorLink>{' '}
+                <NaveSelectorLink to="/about">Про нас</NaveSelectorLink>{' '}
                 <Arrow color="#84BE51" />
                 <NaveSelectorList>
                   <li>
-                    <NavMenuLink to="/n">Наша команда</NavMenuLink>
+                    <NavMenuLink to="/team">Наша команда</NavMenuLink>
                   </li>
                   <li>
-                    <NavMenuLink to="/p">Партнери</NavMenuLink>
+                    <NavMenuLink to="/partners">Партнери</NavMenuLink>
                   </li>
                   <li>
-                    <NavMenuLink to="/d">Договір</NavMenuLink>
+                    <NavMenuLink to="/dogovir">Договір</NavMenuLink>
                   </li>
                 </NaveSelectorList>
               </NaveSelector>
               <li>
-                <NavMenuLink to="/k">Каталог продукції</NavMenuLink>
+                <NavMenuLink to="/catalog">Каталог продукції</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/o">Оплата і доставка</NavMenuLink>
+                <NavMenuLink to="/pay">Оплата і доставка</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/p">Партнери</NavMenuLink>
+                <NavMenuLink to="/partners">Партнери</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/n">Новини</NavMenuLink>
+                <NavMenuLink to="/news">Новини</NavMenuLink>
               </li>
               <li>
-                <NavMenuLink to="/k">Контакти</NavMenuLink>
+                <NavMenuLink to="/contacts">Контакти</NavMenuLink>
               </li>
             </NavMenu>
             <NavUser>
-              <NavMenuLink to="/v">Вхід</NavMenuLink>
+              <NavMenuLink to="/logIn">Вхід</NavMenuLink>
               <span>|</span>
-              <NavMenuLink to="/r">Реестрація</NavMenuLink>
+              <NavMenuLink to="/registration">Реестрація</NavMenuLink>
             </NavUser>
             <MenuBtn type="button" onClick={() => setMenu(menu => !menu)}>
               {menu ? <Cancel></Cancel> : <Menu></Menu>}
