@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Content } from './box.style';
 
 export interface BoxProps {
-  children: React.ReactElement;
+  children: React.ReactElement | React.ReactElement[];
   bgc?: string;
   wh?: number;
 }
