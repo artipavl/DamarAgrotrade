@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const FooterBox = styled.footer`
   margin-top: auto;
+  background: #ffffff;
 `;
 
 type UpButtonProps = {
