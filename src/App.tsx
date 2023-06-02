@@ -9,7 +9,6 @@ import Return from './pages/return/return';
 import Pay from './pages/pay/pay';
 import Order from './pages/order/order';
 import News from './pages/news/news';
-import LogIn from './pages/logIn/logIn';
 import Contacts from './pages/contacts/contacts';
 import Registration from './pages/registration/registration';
 import Catalog from './pages/catalog/catalog';
@@ -19,6 +18,7 @@ import Partners from './pages/partners/partners';
 import Team from './pages/team/team';
 import Dogovir from './pages/dogovir/dogovir';
 import NavLine from './components/navLine/navLine';
+import Authorization from './pages/authorization/authorization';
 
 export const AppBox = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/registration" element={<Registration />} />
-          <Route path="/logIn" element={<LogIn />} />
+          <Route path="/logIn" element={<Authorization />} />
           <Route path="/news" element={<News />} />
           <Route path="/order" element={<Order />} />
           <Route path="/pay" element={<Pay />} />
