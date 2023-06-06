@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 
+export const AboutConteiner = styled.div`
+  padding-bottom: 25px;
+
+  @media screen and (min-width: 1110px) {
+    padding-bottom: 110px;
+  }
+`;
+
 export const AboutText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 25px;
-  margin-bottom: 25px;
 
   color: rgba(0, 0, 0, 0.5);
-
-  @media screen and (min-width: 1110px) {
-    margin-bottom: 110px;
-  }
 `;
 
 export const AccentText = styled.span`
