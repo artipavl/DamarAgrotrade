@@ -17,9 +17,6 @@ export const AboutText = styled.div`
 
   color: rgba(0, 0, 0, 0.5);
 
-  @media screen and (min-width: 1110px) {
-    margin-bottom: 110px;
-  }
 `;
 
 export const AccentText = styled.span`
