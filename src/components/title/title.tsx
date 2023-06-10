@@ -10,7 +10,11 @@ type TitleProps = {
 };
 
 const Title: FC<TitleProps> = ({ title, ...style }) => {
-  return <H2 {...style}>{title}</H2>;
+  return (
+    <H2 {...style}>
+      <h2>{title}</h2>
+    </H2>
+  );
 };
 
 export default Title;
