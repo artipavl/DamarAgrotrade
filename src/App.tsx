@@ -49,7 +49,7 @@ function App() {
           <Route path="/pay" element={<Pay />} />
           <Route path="/return" element={<Return />} />
           <Route path="/thanks" element={<Thanks />} />
-          <Route path="/tovar" element={<Tovar />} />
+          <Route path="/tovar/:id" element={<Tovar />} />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </main>
