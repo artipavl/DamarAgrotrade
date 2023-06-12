@@ -19,12 +19,15 @@ import {
 } from './product.styly';
 
 import Rectangle from '../../img/product/Rectangle.png';
+import { useNavigate } from 'react-router-dom';
 
 type ProductProps = {
   numder?: number;
 };
 
 const Product: FC<ProductProps> = ({ numder = 0 }) => {
+  const navigate = useNavigate();
+
   return (
     <ProductBox>
       <ProductBoxComparison>
@@ -49,7 +52,12 @@ const Product: FC<ProductProps> = ({ numder = 0 }) => {
             <InfoBoxPrice>200 грн</InfoBoxPrice>
             <InfoBoxValue>1 шт</InfoBoxValue>
           </div>
-          <EllipseButton color="#8C3213" hovercolor="#fff" svg={Shopping} />
+          <EllipseButton
+            color="#8C3213"
+            hovercolor="#fff"
+            svg={Shopping}
+            onClick={() => navigate('/tovar/23423')}
+          />
         </InfoBoxPay>
       </InfoBox>
     </ProductBox>
