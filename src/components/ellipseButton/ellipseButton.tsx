@@ -28,7 +28,7 @@ const EllipseButton: FC<EllipseButtonProps> = ({
       )}
     </LinkBtn>
   ) : (
-    <Button type="button" {...style} onClick={e => onClick(e)}>
+    <Button type="button" {...style} onClick={() => onClick()}>
       <Svg></Svg>
       {numder && (
         <Number>
