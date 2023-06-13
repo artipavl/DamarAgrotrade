@@ -1,7 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Section = styled.section``;
+export const Section = styled.section`
+  padding-bottom: 40px;
+`;
 
 export const TovarInformation = styled.div`
   display: flex;
@@ -104,6 +106,11 @@ export const PayBox = styled.div`
   width: 100%;
   background: #ffffff;
   border-radius: 20px;
+  padding: 20px;
+
+  @media screen and (min-width: 1110px) {
+    display: flex;
+  }
 `;
 
 export const Pay = styled.ul`
@@ -111,7 +118,25 @@ export const Pay = styled.ul`
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  padding: 20px;
+
+  :last-child {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    @media screen and (min-width: 1110px) {
+      margin: 0;
+      padding: 0;
+      border: none;
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  @media screen and (min-width: 1110px) {
+    justify-content: space-between;
+  }
 `;
 
 export const PayItem = styled.li``;
@@ -150,8 +175,121 @@ export const CollButton = styled(NavLink)`
   }
 `;
 
-export const Line = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+export const AmountBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: 1110px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+`;
+
+export const Amount = styled.span`
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.2;
+
+  color: #84be51;
+`;
+export const AmountPoint = styled.span`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+`;
+
+export const BuyOprion = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+
+  @media screen and (min-width: 1110px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-left: 42px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 30px;
+  }
+`;
+
+export const EllipseButtonList = styled.ul`
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 1110px) {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+`;
+
+export const Description = styled.div`
+  margin-top: 40px;
+`;
+
+export const DescriptionList = styled.ul`
+  display: flex;
+  gap: 20px;
+`;
+
+export const DescriptionLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 135px;
+  height: 44px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #000000;
+
+  &&.active {
+    background: #1e6140;
+    color: #ffffff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 20px 20px 0px 0px;
+  }
+`;
+
+type DescriptionBodyProps = {
+  path?: string;
+};
+
+export const DescriptionBody = styled.div<DescriptionBodyProps>`
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 20px 20px 20px 20px;
+  display: none;
+
+  ${props =>
+    props.path &&
+    `
+    display: block;
+    `}
+
+  ${props =>
+    props.path &&
+    props.path === 'description' &&
+    `
+    border-radius: 0px 20px 20px 20px;
+    `}
+
+
+
+  @media screen and (width: 320px) {
+    ${props =>
+      props.path &&
+      props.path === 'reviews' &&
+      `
+      border-radius: 20px 0px 20px 20px;
+    `}
+  }
 `;

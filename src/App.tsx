@@ -49,7 +49,10 @@ function App() {
           <Route path="/pay" element={<Pay />} />
           <Route path="/return" element={<Return />} />
           <Route path="/thanks" element={<Thanks />} />
-          <Route path="/tovar/:id" element={<Tovar />} />
+          <Route path="/tovar/:id" element={<Tovar />}>
+            <Route index path="description" element={<>Description</>} />
+            <Route path="reviews" element={<>Reviews</>} />
+          </Route>
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </main>
