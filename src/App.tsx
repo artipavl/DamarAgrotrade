@@ -19,6 +19,8 @@ import Team from './pages/team/team';
 import Dogovir from './pages/dogovir/dogovir';
 import NavLine from './components/navLine/navLine';
 import Authorization from './pages/authorization/authorization';
+import { useAppDispatch } from './hooks';
+import { addToBasket } from './redux/basket/basketSlice';
 
 export const AppBox = styled.div`
   display: flex;
@@ -28,6 +30,8 @@ export const AppBox = styled.div`
 
 function App() {
   const location = useLocation();
+  const dispatch = useAppDispatch();
+  dispatch(addToBasket({ id: 'sad', quantity: 1, name: 'sda', cost: 5 }));
   return (
     <AppBox>
       <Header />
