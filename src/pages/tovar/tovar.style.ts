@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -236,7 +237,7 @@ export const DescriptionList = styled.ul`
   gap: 20px;
 `;
 
-export const DescriptionLink = styled(NavLink)`
+export const DescriptionLink = styled(Link)<{ active: 1 | 0 }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,6 +251,14 @@ export const DescriptionLink = styled(NavLink)`
 
   color: #000000;
 
+  ${props =>
+    props.active &&
+    `
+   background: #1e6140;
+    color: #ffffff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 20px 20px 0px 0px;
+  `}
   &&.active {
     background: #1e6140;
     color: #ffffff;
@@ -267,22 +276,12 @@ export const DescriptionBody = styled.div<DescriptionBodyProps>`
   padding: 20px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
   border-radius: 20px 20px 20px 20px;
-  display: none;
 
   ${props =>
-    props.path &&
-    `
-    display: block;
-    `}
-
-  ${props =>
-    props.path &&
-    props.path === 'description' &&
+    props.path === '' &&
     `
     border-radius: 0px 20px 20px 20px;
     `}
-
-
 
   @media screen and (width: 320px) {
     ${props =>

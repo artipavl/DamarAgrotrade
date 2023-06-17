@@ -18,15 +18,17 @@ import {
   ProductBoxComparison,
 } from './product.styly';
 
-import Rectangle from '../../img/product/Rectangle.png';
 import { useNavigate } from 'react-router-dom';
+import { product } from '../../BD/BD';
 
 type ProductProps = {
   numder?: number;
+  product: product;
 };
 
-const Product: FC<ProductProps> = ({ numder = 0 }) => {
+const Product: FC<ProductProps> = ({ numder = 0, product }) => {
   const navigate = useNavigate();
+  console.log(product);
 
   return (
     <ProductBox>
@@ -41,22 +43,26 @@ const Product: FC<ProductProps> = ({ numder = 0 }) => {
         </Button>
       </ProductBoxComparison>
       <ImgBox>
-        <img src={Rectangle} alt="asdas" height="132" width="97" />
+        <img src={product.imgs[0]} alt="asdas" height="132" width="97" />
       </ImgBox>
       <InfoBox>
-        <InfoBoxTitle>Скор 250 ЕС к.э.</InfoBoxTitle>
-        <InfoBoxKeality>В наявності</InfoBoxKeality>
+        <InfoBoxTitle>{product.title}</InfoBoxTitle>
+        <InfoBoxKeality>
+          {product.availability ? 'В наявності' : 'Не в наявності'}
+        </InfoBoxKeality>
 
         <InfoBoxPay>
           <div>
-            <InfoBoxPrice>200 грн</InfoBoxPrice>
-            <InfoBoxValue>1 шт</InfoBoxValue>
+            <InfoBoxPrice>{product.price} грн</InfoBoxPrice>
+            <InfoBoxValue>
+              {product.value} {product.unit}
+            </InfoBoxValue>
           </div>
           <EllipseButton
             color="#8C3213"
             hovercolor="#fff"
             svg={Shopping}
-            onClick={() => navigate('/tovar/23423')}
+            onClick={() => navigate(`/tovar/${product.id}`)}
           />
         </InfoBoxPay>
       </InfoBox>

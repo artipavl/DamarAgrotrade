@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect, useMemo } from 'react';
 import Box from '../../components/Box/box';
 import {
   CurrentImg,
@@ -37,7 +37,10 @@ import Rectangle from '../../img/product/Rectangle.png';
 import Check from '../../img/check.png';
 import HeroTitle from '../../components/heroTitle/heroTitle';
 import EllipseButton from '../../components/ellipseButton/ellipseButton';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { BD } from '../../BD/BD';
+import { useAppDispatch } from '../../hooks';
+import { addToBasket } from '../../redux/basket/basketSlice';
 
 const tovatImgs = [Rectangle, Rectangle, Check];
 
@@ -46,19 +49,26 @@ type TovarProps = {};
 const Tovar: FC<TovarProps> = props => {
   const [image, setImage] = useState<number>(0);
   const [path, setPath] = useState<string | undefined>('');
+  const { id } = useParams();
+
   const location = useLocation();
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const tovar = useMemo(() => {
+    return BD.find(item => item.id === id);
+  }, [id]);
 
   useEffect(() => {
-    if (
-      !location.pathname.includes('description') &&
-      !location.pathname.includes('reviews')
-    ) {
-      navigate('description');
-    }
+    // if (
+    //   !location.pathname.includes('description') &&
+    //   !location.pathname.includes('reviews')
+    // ) {
+    //   navigate('description');
+    // }
 
     const Path = location.pathname.split('/').pop()?.toLocaleLowerCase();
-    setPath(Path);
+    Path === 'reviews' ? setPath(Path) : setPath('');
   }, [location.pathname, navigate]);
 
   const NextImg = (next: boolean, number?: number) => {
@@ -79,6 +89,10 @@ const Tovar: FC<TovarProps> = props => {
     }
   };
 
+  if (!tovar) {
+    return <></>;
+  }
+
   return (
     <Box>
       <Section>
@@ -89,7 +103,7 @@ const Tovar: FC<TovarProps> = props => {
                 <Arrow />
               </ImgButton>
               <img
-                src={tovatImgs[image]}
+                src={tovar?.imgs[image]}
                 alt="sdfsdf"
                 width={93}
                 height={127}
@@ -99,29 +113,44 @@ const Tovar: FC<TovarProps> = props => {
               </ImgButton>
             </CurrentImg>
             <ImgList>
-              {tovatImgs.map((Img, index) => (
-                <ImgItem key={index} onClick={() => NextImg(true, index)}>
-                  <img src={Img} alt="sdfsdf" width={43} height={195} />
-                </ImgItem>
-              ))}
+              {tovar?.imgs.map(
+                (Img, index) =>
+                  index < 3 && (
+                    <ImgItem key={index} onClick={() => NextImg(true, index)}>
+                      <img
+                        src={Img}
+                        alt={tovar.title}
+                        width={43}
+                        height={195}
+                      />
+                    </ImgItem>
+                  )
+              )}
             </ImgList>
           </ImgBox>
           <TovarBox>
-            <HeroTitle title={'Гербіцид Комманд®, ФМС УКРАЇНА'} span={''} />
+            <HeroTitle
+              title={`${
+                tovar.title
+              }, ${tovar.producer.name.toLocaleUpperCase()}`}
+              span={''}
+            />
             <BuyBox>
               <Availability>
-                <span>+ В найявності</span>
-                <span>1 619,03 грн./л</span>
+                <span>
+                  {tovar.availability ? '+В наявності' : '-Не в наявності'}
+                </span>
+                {/* <span>1 619,03 грн./л</span> */}
               </Availability>
               <PayBox>
                 <Pay>
                   <PayItem>
                     <PayTitle>Виробник</PayTitle>
-                    <span>ФМС Украина</span>
+                    <span>{tovar.producer.name}</span>
                   </PayItem>
                   <PayItem>
                     <PayTitle>Оплата</PayTitle>
-                    <span>ФМС Украина</span>
+                    <span>-</span>
                   </PayItem>
                 </Pay>
                 <Pay>
@@ -140,13 +169,17 @@ const Tovar: FC<TovarProps> = props => {
             </BuyBox>
             <BuyOprion>
               <AmountBox>
-                <Amount>7814,63 грн</Amount>
-                <AmountPoint>Ціна за 5 л</AmountPoint>
+                <Amount>{tovar.price} грн</Amount>
+                <AmountPoint>
+                  Ціна за {tovar.value} {tovar.unit}
+                </AmountPoint>
               </AmountBox>
               <EllipseButtonList>
                 <li>
                   <EllipseButton
-                    onClick={() => {}}
+                    onClick={() => {dispatch(
+                      addToBasket(tovar)
+                    );}}
                     color="#8C3213"
                     hovercolor="#fff"
                     svg={Shopping}
@@ -176,10 +209,14 @@ const Tovar: FC<TovarProps> = props => {
         <Description>
           <DescriptionList>
             <li>
-              <DescriptionLink to="description">Опис</DescriptionLink>
+              <DescriptionLink active={path !== 'reviews' ? 1 : 0} to="">
+                Опис
+              </DescriptionLink>
             </li>
             <li>
-              <DescriptionLink to="reviews">Відгуки</DescriptionLink>
+              <DescriptionLink active={path === 'reviews' ? 1 : 0} to="reviews">
+                Відгуки
+              </DescriptionLink>
             </li>
           </DescriptionList>
           <DescriptionBody path={path}>

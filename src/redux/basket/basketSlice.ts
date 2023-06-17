@@ -1,14 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from '../store';
+import { product } from '../../BD/BD';
 
 // Define a type for the slice state
 
-type tovar = {
+type updateQuantityPayload = product & {
   id: string;
   quantity: number;
-  name: string;
-  cost: number;
+};
+type tovar = product & {
+  quantity: number;
 };
 
 interface BasketState {
@@ -33,14 +35,23 @@ export const basketSlice = createSlice({
     // incrementByAmount: (state, action: PayloadAction<number>) => {
     //   state.value += action.payload;
     // },
-    addToBasket: (state, action: PayloadAction<tovar>) => {
-      console.log('ctart');
-      const index = state.tovars.find(item => item.id === action.payload.id);
+    addToBasket: (state, action: PayloadAction<product>) => {
+      const index = state.tovars.findIndex(
+        item => item.id === action.payload.id
+      );
 
-      if (index) {
-        index.quantity = index.quantity + 1;
+      if (index !== -1) {
+        state.tovars[index].quantity = state.tovars[index].quantity + 1;
       } else {
-        state.tovars.push(action.payload);
+        state.tovars.push({ ...action.payload, quantity: 1 });
+      }
+    },
+    updateQuantity: (state, action: PayloadAction<updateQuantityPayload>) => {
+      const index = state.tovars.findIndex(
+        item => item.id === action.payload.id
+      );
+      if (index !== -1) {
+        state.tovars[index].quantity = action.payload.quantity;
       }
     },
   },

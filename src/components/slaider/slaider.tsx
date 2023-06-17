@@ -12,6 +12,7 @@ import {
 import Product from '../product/product';
 
 import { ReactComponent as Arrow } from '../../img/arrowSlaider.svg';
+import { BD } from '../../BD/BD';
 
 type SlaiderProps = {
   accent?: boolean;
@@ -83,7 +84,12 @@ const Slaider: FC<SlaiderProps> = ({ accent = false, overflow = 'hidden' }) => {
               if (xStart !== x) swapItem(xStart - x > 0);
             }}
           >
-            <li>
+            {BD.map(product => (
+              <li>
+                <Product product={product} />
+              </li>
+            ))}
+            {/* <li>
               <Product />
             </li>
             <li>
@@ -115,7 +121,7 @@ const Slaider: FC<SlaiderProps> = ({ accent = false, overflow = 'hidden' }) => {
             </li>
             <li>
               <Product />
-            </li>
+            </li> */}
           </SliderList>
         </SliderListBox>
 
