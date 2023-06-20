@@ -77,7 +77,11 @@ export const InfoBoxValue = styled.span`
   line-height: 17px;
 `;
 
-export const Button = styled.button`
+type ButtonProps = {
+  comparison: boolean;
+};
+
+export const Button = styled.button<ButtonProps>`
   position: relative;
   display: flex;
   width: 41px;
@@ -94,6 +98,15 @@ export const Button = styled.button`
 
     box-shadow: 0px 5px 14px rgba(140, 50, 19, 0.3);
   }
+
+  ${props =>
+    props.comparison &&
+    `
+   background-color: #8c3213;
+    color: #fff;
+
+    box-shadow: 0px 5px 14px rgba(140, 50, 19, 0.3);
+  `}
 `;
 
 export const Number = styled.div`

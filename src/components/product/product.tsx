@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 import EllipseButton from '../ellipseButton/ellipseButton';
 
@@ -20,24 +20,40 @@ import {
 
 import { useNavigate } from 'react-router-dom';
 import { product } from '../../BD/BD';
+import { useAppDispatch } from '../../hooks';
+import {
+  addToСomparison,
+  selectСomparison,
+} from '../../redux/comparison/comparisonSlice';
+import { useSelector } from 'react-redux';
 
 type ProductProps = {
-  numder?: number;
   product: product;
 };
 
-const Product: FC<ProductProps> = ({ numder = 0, product }) => {
+const Product: FC<ProductProps> = ({ product }) => {
+  const [comparison, setСomparison] = useState<boolean>(false);
   const navigate = useNavigate();
-  console.log(product);
+  const dispatch = useAppDispatch();
+  const AllComparison = useSelector(selectСomparison);
+
+  useEffect(() => {
+    const find = AllComparison.find(item => item.id === product.id);
+
+    find ? setСomparison(true) : setСomparison(false);
+  }, [AllComparison, product.id]);
 
   return (
     <ProductBox>
       <ProductBoxComparison>
-        <Button>
+        <Button
+          comparison={comparison}
+          onClick={() => !comparison && dispatch(addToСomparison(product))}
+        >
           <Comparison></Comparison>
-          {numder !== 0 && (
+          {AllComparison.length !== 0 && (
             <Number>
-              <span>{numder}</span>
+              <span>{AllComparison.length}</span>
             </Number>
           )}
         </Button>
