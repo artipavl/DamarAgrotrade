@@ -59,6 +59,6 @@ export const basketSlice = createSlice({
 
 export const { addToBasket } = basketSlice.actions;
 
-export const selectCount = (state: RootState) => state.basket.tovars;
+export const selectBasket = (state: RootState) => state.basket.tovars;
 
 export default basketSlice.reducer;
