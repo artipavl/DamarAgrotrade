@@ -84,8 +84,8 @@ const Slaider: FC<SlaiderProps> = ({ accent = false, overflow = 'hidden' }) => {
               if (xStart !== x) swapItem(xStart - x > 0);
             }}
           >
-            {BD.map(product => (
-              <li>
+            {BD.map((product, index) => (
+              <li key={index}>
                 <Product product={product} />
               </li>
             ))}
